@@ -1,0 +1,12 @@
+.DS_Store
+node_modules
+/build
+/.svelte-kit
+/package
+.env
+.env.*
+!.env.example
+
+/src/routes/posts/_source
+/src/routes/*.md
+!/src/routes/__error.md
