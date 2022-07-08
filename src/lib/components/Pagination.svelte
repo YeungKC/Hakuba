@@ -4,7 +4,7 @@
 	import chevronRight from '@fortawesome/fontawesome-free/svgs/solid/chevron-right.svg';
 
 	const build = (current: number, total: number) => {
-		if(total === 0) return []
+		if (total === 0) return [];
 
 		let arr: (string | number)[] = Array.from({ length: 3 }, (_, i) => i + current - 1).filter(
 			(e) => e > 0 && e <= total

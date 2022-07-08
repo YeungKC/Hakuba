@@ -7,5 +7,4 @@
 			redirect: '/'
 		};
 	};
-
 </script>

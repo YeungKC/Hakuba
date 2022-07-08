@@ -9,7 +9,7 @@ export const findConfig = (list) => {
 		(e) => e.category.name === configCategoryName && e.title === 'index'
 	)?.body;
 
-	if (!configText) return {}
+	if (!configText) return {};
 
 	return dotenv.parse(configText);
 };
