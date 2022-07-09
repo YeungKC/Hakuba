@@ -23,7 +23,7 @@
 		"@tailwindcss/typography": "^0.5.2",
 		"@types/eslint": "^8.4.5",
 		"@types/lodash-es": "^4.17.6",
-		"@types/node": "^18.0.0",
+		"@types/node": "^18.0.3",
 		"@types/prettier": "^2.6.3",
 		"@typescript-eslint/eslint-plugin": "^5.27.0",
 		"@typescript-eslint/parser": "^5.27.0",
