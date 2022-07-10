@@ -1,6 +1,6 @@
 <script lang="ts">
 	import classname from 'classnames';
-	import { PAGES } from '$lib/constants';
+	import { DOMAIN, PAGES } from '$lib/constants';
 	let clazz: string | undefined = undefined;
 	export { clazz as class };
 </script>
@@ -17,5 +17,10 @@
 				<a sveltekit:prefetch {href}>{name}</a>
 			</li>
 		{/each}
+		{#if DOMAIN} 
+			<li>
+				<a sveltekit:prefetch target="_blank" href="/atom.xml">Feed</a>
+			</li>
+		{/if}
 	</ul>
 </nav>
