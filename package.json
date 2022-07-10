@@ -3,8 +3,8 @@
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "vite dev",
-		"generateData": "node .scripts/index.mjs",
-		"build": "node .scripts/index.mjs && vite build",
+		"generateData": "ts-node .scripts/index.ts",
+		"build": "ts-node .scripts/index.ts && vite build",
 		"package": "svelte-kit package",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync",

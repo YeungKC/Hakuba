@@ -1,3 +1,5 @@
+import type Post from './types/post';
+
 export const pageSize = 10;
 
 const env = import.meta.env;
@@ -9,12 +11,14 @@ export const EMAIL = env.VITE_EMAIL;
 export const TWITTER = env.VITE_TWITTER;
 export const GITHUB_URL = env.VITE_GITHUB_URL;
 export const DOMAIN = env.VITE_DOMAIN;
-export const PAGES = (env.VITE_PAGES.split(',') as string[])
+export const PAGES = (JSON.parse(env.VITE_PAGES) as string[])
 	.filter((name) => name && name !== '__error')
 	.map((name) => ({
 		name,
 		href: `/${name.toLowerCase()}`
 	}));
+
+export const POSTS = JSON.parse(env.VITE_POSTS) as Post[];
 
 export const REPOSITORY_URL = `https://github.com/${USER_NAME}/${env.VITE_REPOSITORY}`;
 export const REPOSITORY_ISSUES_URL = `${REPOSITORY_URL}/issues`;
