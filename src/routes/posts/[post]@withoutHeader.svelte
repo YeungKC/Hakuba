@@ -27,7 +27,21 @@
 <script lang="ts">
 	export let component: SvelteComponent;
 	export let metadata: Post;
+
+	const labels = metadata.labels?.map(({ name }) => name);
 </script>
+
+<svelte:head>
+	<title>{metadata.title}</title>
+	<meta property="og:title" content={metadata.title} />
+	{#if metadata.excerpt}
+		<meta name="description" content={metadata.excerpt} />
+		<meta property="og:description" content={metadata.excerpt} />
+	{/if}
+	{#if labels?.length}
+		<meta name="keywords" content={labels.join(',')} />
+	{/if}
+</svelte:head>
 
 <Article>
 	<header class="mb-14 flex flex-col">
@@ -43,7 +57,7 @@
 					Updated: &nbsp;&nbsp;{readableDate(metadata.updated)}
 				</span>
 			{/if}
-			<Labels labels={metadata.labels?.map(({ name }) => name)} />
+			<Labels {labels} />
 		</div>
 	</header>
 

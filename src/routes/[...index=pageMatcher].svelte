@@ -1,7 +1,7 @@
 <script context="module" lang="ts">
 	import type { Load } from '@sveltejs/kit';
 	import type Post from '$lib/types/post';
-	import { pageSize } from '$lib/constants';
+	import { BIO, BLOG_NAME, pageSize } from '$lib/constants';
 	import { fetchPosts, fetchLabels } from '$lib/helper/fetchPosts';
 	import LabelsSection from '$lib/components/LabelsSection.svelte';
 	import PostsSection from '$lib/components/PostsSection.svelte';
@@ -46,7 +46,22 @@
 	export let posts: Post[];
 	export let totalCount: number;
 	export let basePath: string;
+
+	const buildTitle = (selected: string | undefined, currentPage: number) => {
+		let title = `${BLOG_NAME}`;
+
+		if (selected) title = `${title} - Lbael ${selected}`;
+		if (currentPage > 1) title = `${title} - Page ${currentPage}`;
+		return title;
+	};
+
+	$: title = buildTitle(selected, currentPage);
 </script>
+
+<svelte:head>
+	<title>{title}</title>
+	<meta property="og:title" content={title} />
+</svelte:head>
 
 <AboutSection />
 <LabelsSection {labels} {selected} />

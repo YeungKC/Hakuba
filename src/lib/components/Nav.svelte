@@ -8,7 +8,7 @@
 <nav>
 	<ul
 		class={classname(
-			'flex flex-row divide-x leading-4 divide-dotted child:px-4 first:child:pl-0 last:child:pr-0',
+			'flex flex-row divide-x leading-4 divide-dotted child:px-4 first:child:pl-0 last:child:pr-0 [&_a]:py-4 [&_a]:px-2 -ml-2',
 			clazz
 		)}
 	>
