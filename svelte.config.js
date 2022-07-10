@@ -14,6 +14,7 @@ const config = {
 
 	preprocess: [
 		preprocess({
+			preserve: ['ld+json'],
 			postcss: true
 		}),
 		mdsvex({
