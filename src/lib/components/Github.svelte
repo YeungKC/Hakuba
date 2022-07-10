@@ -3,6 +3,6 @@
 	import { GITHUB_URL } from '$lib/constants';
 </script>
 
-<a target="_blank" rel="noopener" href={GITHUB_URL}>
+<a target="_blank" href={GITHUB_URL}>
 	<img src={github} alt="Github" width="14" height="14" />
 </a>

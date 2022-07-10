@@ -6,7 +6,7 @@
 </script>
 
 <header class="mb-8">
-	<a href="/"><Header>{BLOG_NAME}</Header></a>
+	<a sveltekit:prefetch href="/"><Header>{BLOG_NAME}</Header></a>
 
 	<Nav class="divide-slate-600 text-slate-600" />
 </header>

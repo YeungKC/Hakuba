@@ -3,6 +3,7 @@ import preprocess from 'svelte-preprocess';
 import { mdsvex } from 'mdsvex';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeExternalLinks from 'rehype-external-links';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -20,7 +21,7 @@ const config = {
 			highlight: {
 				alias: { vue: 'html' }
 			},
-			rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
+			rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings, rehypeExternalLinks],
 			layout: 'src/routes/__layout-md.svelte'
 		})
 	],

@@ -13,7 +13,9 @@
 	{#each posts as post}
 		<li class="flex flex-row items-center gap-6">
 			<div class="shrink-0 text-slate-500">{readableDate(post.published)}</div>
-			<a class="truncate underline" href={`/posts/${post.number}`}>{post.title}</a>
+			<a sveltekit:prefetch class="truncate underline" href={`/posts/${post.number}`}
+				>{post.title}</a
+			>
 		</li>
 	{/each}
 </ul>
