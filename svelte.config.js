@@ -4,6 +4,7 @@ import { mdsvex } from 'mdsvex';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeExternalLinks from 'rehype-external-links';
+import addClasses from 'rehype-add-classes';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -22,7 +23,12 @@ const config = {
 			highlight: {
 				alias: { vue: 'html' }
 			},
-			rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings, rehypeExternalLinks],
+			rehypePlugins: [
+				rehypeSlug,
+				rehypeAutolinkHeadings,
+				rehypeExternalLinks,
+				[addClasses, { 'h1,h2,h3,h4,h5,h6': 'group' }]
+			],
 			layout: 'src/routes/__layout-md.svelte'
 		})
 	],

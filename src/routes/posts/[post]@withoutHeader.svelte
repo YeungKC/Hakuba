@@ -25,6 +25,8 @@
 </script>
 
 <script lang="ts">
+	import BackButton from '../../lib/components/BackButton.svelte';
+
 	export let component: SvelteComponent;
 	export let metadata: Post;
 
@@ -45,7 +47,10 @@
 
 <Article>
 	<header class="mb-14 flex flex-col">
-		<Header>{metadata.title}</Header>
+		<Header class="group relative">
+			{metadata.title}
+			<BackButton />
+		</Header>
 		<div
 			class="flex flex-col justify-center [&_*]:!text-sm [&_*]:!font-normal [&_*]:!text-slate-600 "
 		>
