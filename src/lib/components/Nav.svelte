@@ -12,17 +12,10 @@
 			clazz
 		)}
 	>
-		<li>
-			<a href="/">Home</a>
-		</li>
-		{#each PAGES as { name, href }}
+		{#each [{ name: 'Hemo', href: '/' }, ...PAGES] as { name, href }}
 			<li>
-				<a {href}>{name}</a>
+				<a sveltekit:prefetch {href}>{name}</a>
 			</li>
 		{/each}
-
-		<!-- <li>
-			<a href="/feed">Feed</a>
-		</li> -->
 	</ul>
 </nav>

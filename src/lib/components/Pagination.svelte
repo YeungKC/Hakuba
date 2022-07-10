@@ -45,7 +45,7 @@
 
 <nav class="mt-8 flex flex-row items-center gap-1 self-center child:p-2">
 	{#if hasPrev}
-		<a href={to(currentPage - 1)}>
+		<a sveltekit:prefetch href={to(currentPage - 1)}>
 			<img src={chevronLeft} alt="Previous" width="6" height="6" />
 		</a>
 	{/if}
@@ -54,7 +54,7 @@
 			<span>...</span>
 		{/if}
 		{#if typeof e === 'number'}
-			<a href={to(e)}>
+			<a sveltekit:prefetch href={to(e)}>
 				<span
 					class={classNames('border-b border-transparent', {
 						'border-slate-900': currentPage === e
@@ -66,7 +66,7 @@
 		{/if}
 	{/each}
 	{#if hasNext}
-		<a href={to(currentPage + 1)}>
+		<a sveltekit:prefetch href={to(currentPage + 1)}>
 			<img src={chevronRight} alt="Next" width="6" height="6" />
 		</a>
 	{/if}
