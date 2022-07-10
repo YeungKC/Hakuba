@@ -17,7 +17,7 @@
 				<a sveltekit:prefetch {href}>{name}</a>
 			</li>
 		{/each}
-		{#if DOMAIN} 
+		{#if DOMAIN}
 			<li>
 				<a sveltekit:prefetch target="_blank" href="/atom.xml">Feed</a>
 			</li>
