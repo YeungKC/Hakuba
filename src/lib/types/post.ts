@@ -1,8 +1,11 @@
 export default interface Post {
 	title: string;
-	createdAt: string;
-	lastEditedAt?: string | null;
-	labels?: string[];
-	discussionNumber: number;
-	originalUrl: string;
+	published: string;
+	updated?: string | null;
+	number: number;
+	url: string;
+	labels?: { name: string; color: string }[];
+	// todo
+	// identifyPath?: string;
+	excerpt?: string;
 }

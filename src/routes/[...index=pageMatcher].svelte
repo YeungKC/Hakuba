@@ -30,7 +30,7 @@
 			props: {
 				selected: label,
 				labels,
-				posts: list,
+				posts: list.map(({ metadata }) => metadata),
 				totalCount,
 				currentPage,
 				basePath

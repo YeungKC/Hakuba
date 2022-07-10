@@ -12,8 +12,8 @@
 <ul class="flex flex-col gap-2">
 	{#each posts as post}
 		<li class="flex flex-row items-center gap-6">
-			<div class="shrink-0 text-slate-500">{readableDate(post.createdAt)}</div>
-			<a class="truncate underline" href={`/posts/${post.discussionNumber}`}>{post.title}</a>
+			<div class="shrink-0 text-slate-500">{readableDate(post.published)}</div>
+			<a class="truncate underline" href={`/posts/${post.number}`}>{post.title}</a>
 		</li>
 	{/each}
 </ul>

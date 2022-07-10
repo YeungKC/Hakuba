@@ -1,32 +1,31 @@
 import fetch from 'node-fetch';
 import dotenv from 'dotenv';
+import { DiscussionsType, FetchDiscussionsType, FetchViewerType } from './types';
+
 dotenv.config();
 
-const fetchData = async (query, variables) => {
+const fetchData = async <T>(query: string) => {
 	const res = await fetch('https://api.github.com/graphql', {
 		method: 'POST',
 		headers: {
 			Authorization: `bearer ${process.env.GITHUB_TOKEN}`
 		},
-		body: JSON.stringify({
-			query,
-			variables
-		})
+		body: JSON.stringify({ query })
 	});
 
-	const json = await res.json();
+	const json: any = await res.json();
 
 	if (json.errors) {
 		throw new Error(JSON.stringify(json.errors, null, 2));
 	}
 
-	return json.data;
+	return json.data as T;
 };
 
 export const fetchUser = async () => {
 	console.log('fetching... user');
 	const user = (
-		await fetchData(`
+		await fetchData<FetchViewerType>(`
 {
 	viewer {
 		login
@@ -39,10 +38,10 @@ export const fetchUser = async () => {
 	return user;
 };
 
-const fetchDiscussions = async (owner, after) => {
+export const fetchDiscussions = async (owner: string, after?: string) => {
 	console.log(`fetching discussions... endCursor: ${after}`);
 	return (
-		await fetchData(`
+		await fetchData<FetchDiscussionsType>(`
 {
   repository(owner: "${owner}", name: "${process.env.REPOSITORY}") {
     discussions(first: 100, ${
@@ -56,6 +55,7 @@ const fetchDiscussions = async (owner, after) => {
         number
         title
         createdAt
+		publishedAt
         lastEditedAt
         url
         body
@@ -77,15 +77,15 @@ const fetchDiscussions = async (owner, after) => {
 	).repository.discussions;
 };
 
-export const fetchAllDiscussions = async (user) => {
+export const fetchAllDiscussions = async (user: string) => {
 	let endCursor;
-	let list = [];
+	let list: DiscussionsType[] = [];
 	// eslint-disable-next-line no-constant-condition
 	while (true) {
 		const { nodes, pageInfo } = await fetchDiscussions(user, endCursor);
 		list = list.concat(nodes);
-		endCursor = pageInfo.hasNextPage ? pageInfo.endCursor : undefined;
-		if (!endCursor) break;
+		if (!pageInfo.hasNextPage) break;
+		endCursor = pageInfo.endCursor;
 	}
 
 	console.log(`fetched ${list.length} discussions`);
