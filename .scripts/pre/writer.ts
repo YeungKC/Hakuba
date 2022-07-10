@@ -1,7 +1,7 @@
 import path from 'path';
 import { mkdirSync, promises } from 'fs';
 import { DiscussionsType } from './types';
-import Post from '../src/lib/types/post';
+import Post from '../../src/lib/types/post';
 
 export const writePosts = async (list: DiscussionsType[]) => {
 	const dir = path.join('./src/routes/posts/_source');

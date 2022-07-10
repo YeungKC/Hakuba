@@ -3,8 +3,8 @@
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "vite dev",
-		"generateData": "ts-node .scripts/index.ts",
-		"build": "ts-node .scripts/index.ts && vite build",
+		"generateData": "ts-node .scripts/pre/index.ts",
+		"build": "ts-node .scripts/pre/index.ts && vite build && ts-node .scripts/post/index.ts",
 		"package": "svelte-kit package",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync",
@@ -48,6 +48,7 @@
 		"svelte": "^3.44.0",
 		"svelte-check": "^2.7.1",
 		"svelte-preprocess": "^4.10.7",
+		"svelte-sitemap": "^2.5.1",
 		"tailwindcss": "^3.1.5",
 		"ts-node": "^10.8.2",
 		"tslib": "^2.3.1",
