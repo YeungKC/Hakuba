@@ -37,7 +37,8 @@ const config = {
 		adapter: adapter({ fallback: '404.html' }),
 		prerender: {
 			default: true
-		}
+		},
+		trailingSlash: 'always'
 		// inlineStyleThreshold: 1024 * 32
 	}
 };
