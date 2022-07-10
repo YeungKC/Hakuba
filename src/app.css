@@ -4,6 +4,6 @@
 
 @layer base {
 	a > span.icon.icon-link {
-		@apply relative opacity-0 transition before:absolute before:-left-[1.5ch] before:pr-[1.5ch] before:content-['#'] group-hover:opacity-100;
+		@apply relative opacity-0 transition before:absolute before:-left-[1.5ch] before:pr-[1.5ch] before:content-['#'] group-hover:opacity-100 [@media(any-hover:none)]:opacity-100;
 	}
 }
