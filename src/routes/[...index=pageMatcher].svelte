@@ -1,7 +1,7 @@
 <script context="module" lang="ts">
 	import type { Load } from '@sveltejs/kit';
 	import type Post from '$lib/types/post';
-	import { BIO, BLOG_NAME, pageSize } from '$lib/constants';
+	import { BIO, BLOG_NAME, PAGE_SIZE } from '$lib/constants';
 	import { fetchPosts, fetchLabels } from '$lib/helper/fetchPosts';
 	import LabelsSection from '$lib/components/LabelsSection.svelte';
 	import PostsSection from '$lib/components/PostsSection.svelte';
@@ -18,8 +18,8 @@
 		const [{ list, count: totalCount }, labels] = await Promise.all([
 			fetchPosts({
 				label: label,
-				offset: (currentPage - 1) * pageSize,
-				limit: pageSize
+				offset: (currentPage - 1) * PAGE_SIZE,
+				limit: PAGE_SIZE
 			}),
 			fetchLabels()
 		]);
@@ -66,7 +66,7 @@
 <AboutSection />
 <LabelsSection {labels} {selected} />
 <PostsSection {posts} />
-<Pagination {basePath} {currentPage} {pageSize} {totalCount} />
+<Pagination {basePath} {currentPage} pageSize={PAGE_SIZE} {totalCount} />
 
 {#if !labels.length && !posts.length}
 	<p class="text-slate-500">No posts found.</p>
