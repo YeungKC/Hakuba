@@ -2,7 +2,7 @@
 	import '../app.css';
 	import '../code.css';
 	import Footer from '$lib/components/Footer.svelte';
-	import { BLOG_NAME, DESCRIPTION, DOMAIN, KEYWORDS, TWITTER } from '../lib/constants';
+	import { BLOG_NAME, DESCRIPTION, KEYWORDS, TWITTER } from '../lib/constants';
 </script>
 
 <svelte:head>
