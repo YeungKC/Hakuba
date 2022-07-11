@@ -1,7 +1,7 @@
 <script context="module" lang="ts">
 	import type { Load } from '@sveltejs/kit';
 	import type Post from '$lib/types/post';
-	import { BIO, BLOG_NAME, PAGE_SIZE } from '$lib/constants';
+	import { BLOG_NAME, PAGE_SIZE } from '$lib/constants';
 	import { fetchPosts, fetchLabels } from '$lib/helper/fetchPosts';
 	import LabelsSection from '$lib/components/LabelsSection.svelte';
 	import PostsSection from '$lib/components/PostsSection.svelte';
