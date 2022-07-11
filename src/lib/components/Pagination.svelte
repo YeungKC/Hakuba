@@ -1,5 +1,5 @@
 <script lang="ts">
-	import classNames from 'classnames';
+	import clsx from 'clsx';
 	import chevronLeft from '@fortawesome/fontawesome-free/svgs/solid/chevron-left.svg';
 	import chevronRight from '@fortawesome/fontawesome-free/svgs/solid/chevron-right.svg';
 
@@ -56,7 +56,7 @@
 		{#if typeof e === 'number'}
 			<a sveltekit:prefetch href={to(e)}>
 				<span
-					class={classNames('border-b border-transparent', {
+					class={clsx('border-b border-transparent', {
 						'border-slate-900': currentPage === e
 					})}
 				>

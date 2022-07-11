@@ -1,5 +1,5 @@
 <script lang="ts">
-	import classname from 'classnames';
+	import classname from 'clsx';
 	import { DOMAIN, PAGES } from '$lib/constants';
 	let clazz: string | undefined = undefined;
 	export { clazz as class };

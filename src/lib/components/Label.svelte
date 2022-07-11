@@ -1,5 +1,5 @@
 <script lang="ts">
-	import classNames from 'classnames';
+	import clsx from 'clsx';
 
 	export let label: string | [string, number];
 	export let selected: string | undefined = undefined;
@@ -13,7 +13,7 @@
 </script>
 
 <a
-	class={classNames('!font-normal', {
+	class={clsx('!font-normal', {
 		underline: selected === label
 	})}
 	href={`/labels/${label}`}>#{label}{count ? `(${count})` : ''}</a
