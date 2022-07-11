@@ -7,6 +7,7 @@ node_modules
 .env.*
 !.env.example
 
+yarn-error.log
 report.html
 
 /src/routes/posts/_source
