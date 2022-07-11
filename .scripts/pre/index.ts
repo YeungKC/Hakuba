@@ -13,10 +13,23 @@ const list = await fetchAllDiscussions(user);
 const config = findConfig(list);
 
 config.NAME = user;
-config.BLOG_NAME = config.BLOG_NAME || env.BLOG_NAME || `${user}'s Blog`;
-config.BIO = config.BIO || env.BIO || bio;
 config.GITHUB_URL = githubUrl;
-config.REPOSITORY = env.REPOSITORY!;
+
+[
+	['PAGE_SIZE'],
+	['BLOG_NAME', `${user}'s Blog`],
+	['BIO', bio],
+	['EMAIL'],
+	['TWITTER'],
+	['DOMAIN'],
+	['DESCRIPTION'],
+	['KEYWORDS'],
+	['REPOSITORY']
+].forEach(([key, value]) => {
+	const finalValue = config[key] || env[key] || value;
+	if (!finalValue) return;
+	config[key] = finalValue;
+});
 
 const pages = filterPage(list);
 const posts = filterPost(list);
