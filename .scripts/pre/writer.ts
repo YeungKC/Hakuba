@@ -25,22 +25,7 @@ export const writePages = async (list: DiscussionsType[]) => {
 	);
 };
 
-export const writeEnv = async (
-	config: Record<string, string>,
-	pages: DiscussionsType[],
-	posts: DiscussionsType[]
-) => {
-	config.PAGES = JSON.stringify(pages.map(({ title }) => title));
-	config.POSTS = JSON.stringify(
-		posts.map<Post>((node) => ({
-			title: node.title,
-			published: node.publishedAt,
-			updated: node.lastEditedAt,
-			number: node.number,
-			url: node.url,
-			labels: node.labels.nodes
-		}))
-	);
+export const writeEnv = async (config: Record<string, string>) => {
 	const content = Object.entries(config)
 		.map(([key, value]) => `VITE_${key}=${value}`)
 		.join('\n');

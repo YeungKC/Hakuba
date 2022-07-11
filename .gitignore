@@ -7,6 +7,8 @@ node_modules
 .env.*
 !.env.example
 
+report.html
+
 /src/routes/posts/_source
 /src/routes/*.md
 !/src/routes/__error.md

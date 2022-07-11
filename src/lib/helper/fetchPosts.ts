@@ -1,5 +1,4 @@
 import type Post from '$lib/types/post';
-import { flatten, countBy, sortBy } from 'lodash-es';
 import type { SvelteComponent } from 'svelte';
 import { POSTS } from '../constants';
 
@@ -52,12 +51,18 @@ export const fetchPosts = async ({
 
 export const fetchLabels = async () => {
 	const { list } = await fetchPosts();
-	return sortBy(
-		Object.entries(
-			countBy(flatten(list.map((e) => e.metadata.labels?.map(({ name }) => name) ?? [])))
-		),
-		([, count]) => -count
+	const flatted = list
+		.map((e) => e.metadata.labels?.map(({ name }) => name) ?? [])
+		.flat(Infinity) as string[];
+
+	const labels = Object.entries(
+		flatted.reduce((acc, cur) => {
+			acc[cur] = (acc[cur] ?? 0) + 1;
+			return acc;
+		}, {} as { [index: string]: number })
 	);
+
+	return labels.sort((a, b) => b[1] - a[1]);
 };
 
 export const fetchPost = async (path: string) => {
