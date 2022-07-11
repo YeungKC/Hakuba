@@ -55,11 +55,7 @@
 		{/if}
 		{#if typeof e === 'number'}
 			<a sveltekit:prefetch href={to(e)}>
-				<span
-					class={clsx('border-b border-transparent', {
-						'border-slate-900': currentPage === e
-					})}
-				>
+				<span class={clsx('border-b border-transparent', currentPage === e && 'border-slate-900')}>
 					{e}
 				</span>
 			</a>

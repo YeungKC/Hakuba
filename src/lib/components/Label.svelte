@@ -12,9 +12,6 @@
 	}
 </script>
 
-<a
-	class={clsx('!font-normal', {
-		underline: selected === label
-	})}
-	href={`/labels/${label}`}>#{label}{count ? `(${count})` : ''}</a
+<a class={clsx('!font-normal', selected === label && 'underline')} href={`/labels/${label}`}
+	>#{label}{count ? `(${count})` : ''}</a
 >
