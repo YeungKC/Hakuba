@@ -43,7 +43,7 @@
 	};
 </script>
 
-<nav class="mt-8 flex flex-row items-center self-center child:p-2 gap-1">
+<nav class="mt-8 flex flex-row items-center gap-1 self-center child:p-2">
 	{#if hasPrev}
 		<a sveltekit:prefetch href={to(currentPage - 1)}>
 			<img src={chevronLeft} alt="Previous" width="6" height="6" />
