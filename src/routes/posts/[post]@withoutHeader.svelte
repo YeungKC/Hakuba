@@ -7,6 +7,9 @@
 	import Labels from '$lib/components/Labels.svelte';
 	import { readableDate } from '$lib/helper/readableDate';
 	import { fetchPost } from '../../lib/helper/fetchPosts';
+	import Giscus from '@giscus/svelte';
+	import BackButton from '../../lib/components/BackButton.svelte';
+	import { REPOSITORY, USER_NAME } from '../../lib/constants';
 
 	export const load: Load = async ({ params }) => {
 		try {
@@ -25,8 +28,6 @@
 </script>
 
 <script lang="ts">
-	import BackButton from '../../lib/components/BackButton.svelte';
-
 	export let component: SvelteComponent;
 	export let metadata: Post;
 
@@ -67,4 +68,20 @@
 	</header>
 
 	<svelte:component this={component} />
+
+	<div class="h-16"/>
+
+	<Giscus
+      repo={`${USER_NAME}/${REPOSITORY}`}
+	  repoId=''
+      category="Post"
+      mapping="number"
+	  term={`${metadata.number}`}
+      reactionsEnabled="1"
+      emitMetadata="0"
+      inputPosition="top"
+      theme="light"
+      lang="en"
+      loading="lazy"
+    />
 </Article>
