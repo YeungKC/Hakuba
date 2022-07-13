@@ -10,9 +10,9 @@
 			[label, count] = label;
 		}
 	}
+	$: href = selected === label || selected === label?.[0] ? '/' : `/labels/${label}`;
 </script>
 
-<a
-	class={clsx('!font-normal', selected === label && 'underline')}
-	href={selected === label ? '/' : `/labels/${label}`}>#{label}{count ? `(${count})` : ''}</a
+<a class={clsx('!font-normal', selected === label && 'underline')} {href}
+	>#{label}{count ? `(${count})` : ''}</a
 >
