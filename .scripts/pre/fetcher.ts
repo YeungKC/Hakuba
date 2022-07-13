@@ -59,7 +59,6 @@ export const fetchDiscussions = async (owner: string, after?: string) => {
         lastEditedAt
         url
         body
-		bodyText
 		category {
 			name
 		}
