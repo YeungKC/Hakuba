@@ -17,6 +17,7 @@ export const DOMAIN = env.VITE_DOMAIN;
 export const DESCRIPTION = env.VITE_DESCRIPTION || env.VITE_BIO;
 export const KEYWORDS = env.VITE_KEYWORDS;
 export const REPOSITORY = env.VITE_REPOSITORY;
+export const LANG = env.VITE_LANG || 'en';
 
 export const PAGES = (JSON.parse(env.VITE_PAGES) as string[])
 	.filter((name) => name && name !== '__error')
