@@ -46,7 +46,7 @@
 	{/if}
 </svelte:head>
 
-<Article>
+<Article lang={metadata.lang}>
 	<header class="mb-14 flex flex-col">
 		<Header class="group relative">
 			{metadata.title}

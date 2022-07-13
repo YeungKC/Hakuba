@@ -5,6 +5,7 @@ export default interface Post {
 	number: number;
 	url: string;
 	labels?: { name: string; color: string }[];
+	lang?: string;
 	// todo
 	// identifyPath?: string;
 	excerpt?: string;

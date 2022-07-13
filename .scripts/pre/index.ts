@@ -24,7 +24,8 @@ config.GITHUB_URL = githubUrl;
 	['DOMAIN'],
 	['DESCRIPTION'],
 	['KEYWORDS'],
-	['REPOSITORY']
+	['REPOSITORY'],
+	['LANG']
 ].forEach(([key, value]) => {
 	const finalValue = config[key] || env[key] || value;
 	if (!finalValue) return;

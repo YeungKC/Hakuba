@@ -16,7 +16,7 @@ export const fetchPosts = async ({
 					return {
 						metadata: {
 							...POSTS.find((post) => `${post.number}` === number),
-							metadata
+							...metadata
 						} as Post,
 						component: component as SvelteComponent
 					};
