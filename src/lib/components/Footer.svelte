@@ -5,8 +5,8 @@
 </script>
 
 <footer
-	class="mb-5 mt-12 flex flex-row flex-wrap justify-between text-xs leading-5 text-slate-600 [&_a]:underline"
+	class="mb-5 mt-12 flex flex-col-reverse gap-3 justify-between items-center sm:flex-row text-xs leading-5 text-slate-600 [&_a]:underline"
 >
-	<div class="mr-5">Powered by <a href={HAKUBA_GITHUB_URL}>Hakuba</a></div>
+	<div>Powered by <a href={HAKUBA_GITHUB_URL}>Hakuba</a></div>
 	<Nav class="text-xs" />
 </footer>
