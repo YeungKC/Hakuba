@@ -69,19 +69,19 @@
 
 	<svelte:component this={component} />
 
-	<div class="h-16"/>
+	<div class="h-16" />
 
 	<Giscus
-      repo={`${USER_NAME}/${REPOSITORY}`}
-	  repoId=''
-      category="Post"
-      mapping="number"
-	  term={`${metadata.number}`}
-      reactionsEnabled="1"
-      emitMetadata="0"
-      inputPosition="top"
-      theme="light"
-      lang="en"
-      loading="lazy"
-    />
+		repo={`${USER_NAME}/${REPOSITORY}`}
+		repoId=""
+		category="Post"
+		mapping="number"
+		term={`${metadata.number}`}
+		reactionsEnabled="1"
+		emitMetadata="0"
+		inputPosition="top"
+		theme="light"
+		lang="en"
+		loading="lazy"
+	/>
 </Article>
