@@ -155,15 +155,15 @@
     tiny-glob "^0.2.9"
 
 "@sveltejs/kit@next":
-  version "1.0.0-next.370"
-  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-1.0.0-next.370.tgz#ecd3b8b1f519bb13c72a5046a9e167ff819503eb"
-  integrity sha512-HAQtw8IjXs9yOPWKpuwpGgDT8x6Dgqm14NmFx0emF52vo5wn3tQzu0cBx299Po2RdRgfSDFKrNqVSlL1hVTHcA==
+  version "1.0.0-next.372"
+  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-1.0.0-next.372.tgz#3c7531e7154bbcc2f1097c57856d12b33841e9be"
+  integrity sha512-pcnDfV8YQwj7d/SCaKWT7yPBrmgkPH9Dc4UIeX8yTLXDu8IPzI5kukEOy4xf6LjyJsuSGPy1Ch91ULugtVIdAQ==
   dependencies:
-    "@sveltejs/vite-plugin-svelte" "^1.0.0-next.48"
+    "@sveltejs/vite-plugin-svelte" "1.0.0-next.49"
     chokidar "^3.5.3"
     sade "^1.8.1"
 
-"@sveltejs/vite-plugin-svelte@^1.0.0-next.48":
+"@sveltejs/vite-plugin-svelte@1.0.0-next.49":
   version "1.0.0-next.49"
   resolved "https://registry.yarnpkg.com/@sveltejs/vite-plugin-svelte/-/vite-plugin-svelte-1.0.0-next.49.tgz#44cc00a19c6c23002516b66c5ab90ee66720df57"
   integrity sha512-AKh0Ka8EDgidnxWUs8Hh2iZLZovkETkefO99XxZ4sW4WGJ7VFeBx5kH/NIIGlaNHLcrIvK3CK0HkZwC3Cici0A==
