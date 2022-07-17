@@ -2,7 +2,7 @@
 	import '../app.css';
 	import '../code.css';
 	import Footer from '$lib/components/Footer.svelte';
-	import { BLOG_NAME, DESCRIPTION, KEYWORDS, TWITTER, LANG } from '../lib/constants';
+	import { BLOG_NAME, DESCRIPTION, KEYWORDS, TWITTER } from '$lib/constants';
 </script>
 
 <svelte:head>
@@ -21,7 +21,7 @@
 	{/if}
 </svelte:head>
 
-<main class="flex flex-grow flex-col" lang={LANG}>
+<main class="flex flex-grow flex-col">
 	<slot />
 </main>
 

@@ -11,5 +11,6 @@ yarn-error.log
 report.html
 
 /src/routes/posts/_source
-/src/routes/*.md
-!/src/routes/__error.md
+
+/src/routes/_page/*.md
+!/src/routes/_page/__error.md

@@ -1,12 +1,6 @@
-export default interface Post {
-	title: string;
-	published: string;
-	updated?: string | null;
-	number: number;
-	url: string;
+import type BasePageType from './base';
+
+export default interface Post extends BasePageType {
 	labels?: { name: string; color: string }[];
-	lang?: string;
-	// todo
-	// identifyPath?: string;
 	excerpt?: string;
 }

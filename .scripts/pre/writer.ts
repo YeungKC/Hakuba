@@ -5,6 +5,7 @@ import { DiscussionsType } from './types';
 export const writePosts = async (list: DiscussionsType[]) => {
 	const dir = path.join('./src/routes/posts/_source');
 	mkdirSync(dir, { recursive: true });
+
 	await Promise.all(
 		list.map(({ number, body }) => {
 			const p = path.resolve(dir, `${number}.md`);
@@ -14,11 +15,11 @@ export const writePosts = async (list: DiscussionsType[]) => {
 };
 
 export const writePages = async (list: DiscussionsType[]) => {
-	const dir = path.join('./src/routes');
+	const dir = path.join('./src/routes/_page');
 	mkdirSync(dir, { recursive: true });
 	await Promise.all(
 		list.map(({ title, body }) => {
-			const p = path.resolve(dir, `${title.toLowerCase()}.md`);
+			const p = path.resolve(dir, `${title}.md`);
 			return promises.writeFile(p, body);
 		})
 	);

@@ -1,5 +1,3 @@
-import type Post from './types/post';
-
 export const HAKUBA_GITHUB_URL = 'https://github.com/YeungKC/Hakuba';
 
 const env = import.meta.env;
@@ -18,14 +16,7 @@ export const DESCRIPTION = env.VITE_DESCRIPTION || env.VITE_BIO;
 export const KEYWORDS = env.VITE_KEYWORDS;
 export const REPOSITORY = env.VITE_REPOSITORY;
 export const LANG = env.VITE_LANG || 'en';
+export const COMMENT = env.VITE_COMMENT || true;
 
-export const PAGES = (JSON.parse(env.VITE_PAGES) as string[])
-	.filter((name) => name && name !== '__error')
-	.map((name) => ({
-		name,
-		href: `/${name.toLowerCase()}`
-	}));
-
-export const POSTS = JSON.parse(env.VITE_POSTS) as Post[];
 export const REPOSITORY_URL = `https://github.com/${USER_NAME}/${REPOSITORY}`;
 export const REPOSITORY_ISSUES_URL = `${REPOSITORY_URL}/issues`;

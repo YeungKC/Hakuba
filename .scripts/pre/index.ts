@@ -1,14 +1,14 @@
 import dotenv from 'dotenv';
-import Post from '../../src/lib/types/post.js';
+import { convertFrontMatter } from './converter.js';
 import { fetchUser, fetchAllDiscussions } from './fetcher.js';
-import { findConfig, filterPage, filterPost } from './filter.js';
+import { findConfig, filterPage as filterPage, filterPost } from './filter.js';
 import { writePosts, writePages, writeEnv } from './writer.js';
 
 dotenv.config();
 const env = process.env;
 
 const { login: user, url: githubUrl, bio } = await fetchUser();
-const list = await fetchAllDiscussions(user);
+let list = await fetchAllDiscussions(user);
 
 const config = findConfig(list);
 
@@ -25,27 +25,18 @@ config.GITHUB_URL = githubUrl;
 	['DESCRIPTION'],
 	['KEYWORDS'],
 	['REPOSITORY'],
-	['LANG']
+	['COMMENT']
+	// LANG is not configurable from env
 ].forEach(([key, value]) => {
 	const finalValue = config[key] || env[key] || value;
 	if (!finalValue) return;
 	config[key] = finalValue;
 });
 
+list = convertFrontMatter(list);
+
 const pages = filterPage(list);
 const posts = filterPost(list);
-
-config.PAGES = JSON.stringify(pages.map(({ title }) => title));
-config.POSTS = JSON.stringify(
-	posts.map<Post>((node) => ({
-		title: node.title,
-		published: node.publishedAt,
-		updated: node.lastEditedAt,
-		number: node.number,
-		url: node.url,
-		labels: node.labels.nodes
-	}))
-);
 
 console.log(`writing...`);
 

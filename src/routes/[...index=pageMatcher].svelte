@@ -7,10 +7,10 @@
 	import PostsSection from '$lib/components/PostsSection.svelte';
 	import Pagination from '$lib/components/Pagination.svelte';
 	import AboutSection from '$lib/components/AboutSection.svelte';
-	import { matcher } from '../params/pageMatcher';
+	import { listMatcher } from '../params/pageMatcher';
 
 	export const load: Load = async ({ params }) => {
-		const { label, page: pageString } = matcher(params.index) ?? {};
+		const { label, page: pageString } = listMatcher(params.index) ?? {};
 
 		let currentPage = Number.parseInt(pageString ?? '1');
 		currentPage = (Number.isFinite(currentPage) && currentPage) || 1;
