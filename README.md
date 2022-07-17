@@ -19,9 +19,10 @@ Then renders the actual blog pages from them.
 ## Quick Start
 
 Recommended hosting services:
- - [Vercel](https://vercel.com/)
- - [Netlify](https://app.netlify.com/)
- - [Cloudflare Pages](https://pages.cloudflare.com/)
+
+- [Vercel](https://vercel.com/)
+- [Netlify](https://app.netlify.com/)
+- [Cloudflare Pages](https://pages.cloudflare.com/)
 
 Deploy with Vercel:  
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FYeungKC%2FHakuba&env=GITHUB_TOKEN,REPOSITORY&envDescription=Configure%20token%20and%20repository%20name%2C%20see%20https%3A%2F%2Fgithub.com%2FYeungKC%2FHakuba&project-name=blog&repo-name=blog&demo-title=Hakuba&demo-description=A%20fast%20blog%20starter%20driven%20by%20Github%20discussions%20for%20all%20data.&demo-url=https%3A%2F%2Fhakuba.yeungkc.com%2F&demo-image=https%3A%2F%2Fgithub.com%2FYeungKC%2FHakuba%2Fraw%2Fmaster%2Fscreenshots.png)
@@ -29,25 +30,26 @@ Deploy with Vercel:
 ... or continue scrolling for guide about [manual deployment](#manual-deployment)
 
 ### Configuration
+
 There are various ways to configure it, you can choose to configure it all using environment variables, or partly through discussion.
 
 | Name                                               | Description                                                                                                                                       | Required | env | config |
 | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | --- | ------ |
-| [GITHUB_TOKEN](https://github.com/settings/tokens) | Require a personal access token with permissions in the `public_repo` scope for public repositories, or the `repo` scope for private ones.        | ✅        | ✅   | ❌      |
-| REPOSITORY                                         | The target repository <!-- TODO: add more details about the format -->                                                                            | ✅        | ✅   | ❌      |
-| PAGE_SIZE                                          | Number Category name of posts for configuration purposes in GitHub Discussion.kof posts per page, 10 at default.                                  | ❌        | ✅   | ✅      |
-| BLOG_NAME                                          | Name of the blog, Hakuba fetches it from GitHub profile if left blank.                                                                            | ❌        | ✅   | ✅      |
-| BIO                                                | Biography of the block, Hakuba fetches it from GitHub profile if left blank.                                                                      | ❌        | ✅   | ✅      |
-| EMAIL                                              | Email for contact in the about section                                                                                                            | ❌        | ✅   | ✅      |
-| TWITTER                                            | Twitter handle without the leading `@` (e.g. SvelteJS)                                                                                            | ❌        | ✅   | ✅      |
-| DOMAIN                                             | Domain of the blog. RSS feed will be disabled if left blank.                                                                                      | ❌        | ✅   | ✅      |
-| DESCRIPTION                                        | Description of the blog in SEO metadata.                                                                                                          | ❌        | ✅   | ✅      |
-| KEYWORDS                                           | Keywords for SEO metadata.                                                                                                                        | ❌        | ✅   | ✅      |
-| COMMENT                                            | Whether to enable comments, `true` at default.                                                                                                    | ❌        | ✅   | ✅      |
-| LANGUAGE                                           | Language of the block in form of [HTML language code](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang). `en` at default. | ❌        | ✅   | ✅      |
-| CONFIG_CATEGORY                                    | Category name of posts for configuration purposes on GitHub Discussion. `Config` at default.                                                      | ❌        | ✅   | ❌      |
-| POST_CATEGORY                                      | Category name of actual posts on GitHub Discussion. `Post` at default.                                                                            | ❌        | ✅   | ❌      |
-| PAGE_CATEGORY                                      | Category name of posts for dedicated pages on GitHub Discussion. `Page` at default.                                                               | ❌        | ✅   | ❌      |
+| [GITHUB_TOKEN](https://github.com/settings/tokens) | Require a personal access token with permissions in the `public_repo` scope for public repositories, or the `repo` scope for private ones.        | ✅       | ✅  | ❌     |
+| REPOSITORY                                         | The target repository <!-- TODO: add more details about the format -->                                                                            | ✅       | ✅  | ❌     |
+| PAGE_SIZE                                          | Number Category name of posts for configuration purposes in GitHub Discussion.kof posts per page, 10 at default.                                  | ❌       | ✅  | ✅     |
+| BLOG_NAME                                          | Name of the blog, Hakuba fetches it from GitHub profile if left blank.                                                                            | ❌       | ✅  | ✅     |
+| BIO                                                | Biography of the block, Hakuba fetches it from GitHub profile if left blank.                                                                      | ❌       | ✅  | ✅     |
+| EMAIL                                              | Email for contact in the about section                                                                                                            | ❌       | ✅  | ✅     |
+| TWITTER                                            | Twitter handle without the leading `@` (e.g. SvelteJS)                                                                                            | ❌       | ✅  | ✅     |
+| DOMAIN                                             | Domain of the blog. RSS feed will be disabled if left blank.                                                                                      | ❌       | ✅  | ✅     |
+| DESCRIPTION                                        | Description of the blog in SEO metadata.                                                                                                          | ❌       | ✅  | ✅     |
+| KEYWORDS                                           | Keywords for SEO metadata.                                                                                                                        | ❌       | ✅  | ✅     |
+| COMMENT                                            | Whether to enable comments, `true` at default.                                                                                                    | ❌       | ✅  | ✅     |
+| LANGUAGE                                           | Language of the block in form of [HTML language code](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang). `en` at default. | ❌       | ✅  | ✅     |
+| CONFIG_CATEGORY                                    | Category name of posts for configuration purposes on GitHub Discussion. `Config` at default.                                                      | ❌       | ✅  | ❌     |
+| POST_CATEGORY                                      | Category name of actual posts on GitHub Discussion. `Post` at default.                                                                            | ❌       | ✅  | ❌     |
+| PAGE_CATEGORY                                      | Category name of posts for dedicated pages on GitHub Discussion. `Page` at default.                                                               | ❌       | ✅  | ❌     |
 
 ### Setup GitHub Discussions
 
