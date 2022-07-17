@@ -67,7 +67,7 @@ npm run build
 pnpm build
 ```
 
-deploy the build directory to your server.
+Deploy the build directory to your server.
 
 ## More info
 
@@ -109,3 +109,11 @@ If you deploy using [vercel](https://vercel.com/), [netlify](https://app.netlify
 ## Auto merge
 
 This project using [action-dependabot-auto-merge](https://github.com/ahmadnassri/action-dependabot-auto-merge#token-scope), If there is a CI failure, configure Dependabot secrets.
+
+## Thanks
+
+- [hexo-theme-cactus](https://github.com/probberechts/hexo-theme-cactus), I have used this theme for a long time before, current theme is also influenced by it.
+
+## License
+
+GPL-3.0 license
