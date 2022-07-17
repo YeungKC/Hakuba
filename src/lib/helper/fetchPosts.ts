@@ -1,6 +1,5 @@
 import type Post from '$lib/types/post';
 import type { SvelteComponent } from 'svelte';
-import { POSTS } from '../constants';
 
 export const fetchPosts = async ({
 	offset,
@@ -9,19 +8,13 @@ export const fetchPosts = async ({
 }: { offset?: number; limit?: number; label?: string } = {}) => {
 	let allPosts = (
 		await Promise.all(
-			Object.entries(import.meta.glob(`../../routes/posts/_source/*.md`)).map(
-				async ([path, page]) => {
-					const { metadata, default: component } = await page();
-					const number = path.split('/').pop()?.split('.')?.[0];
-					return {
-						metadata: {
-							...POSTS.find((post) => `${post.number}` === number),
-							...metadata
-						} as Post,
-						component: component as SvelteComponent
-					};
-				}
-			)
+			Object.entries(import.meta.glob('../../routes/posts/_source/*.md')).map(async ([, page]) => {
+				const { metadata, default: component } = await page();
+				return {
+					metadata: metadata as Post,
+					component: component as SvelteComponent
+				};
+			})
 		)
 	).sort(
 		(a, b) => new Date(b.metadata.published).valueOf() - new Date(a.metadata.published).valueOf()
@@ -67,5 +60,7 @@ export const fetchLabels = async () => {
 
 export const fetchPost = async (path: string) => {
 	const { list } = await fetchPosts();
-	return list.find(({ metadata: { number } }) => `${number}` === path);
+	return list.find(
+		({ metadata: { number, path: identifyPath } }) => identifyPath === path || `${number}` === path
+	);
 };

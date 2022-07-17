@@ -1,3 +1,7 @@
+---
+comment: true
+---
+
 <script>
  import { REPOSITORY_ISSUES_URL } from '$lib/constants';
 </script>

@@ -1,8 +1,10 @@
 <script lang="ts">
 	import classname from 'clsx';
-	import { DOMAIN, PAGES } from '$lib/constants';
+	import { DOMAIN } from '$lib/constants';
+	import type Page from '../types/page';
 	let clazz: string | undefined = undefined;
-	export { clazz as class };
+	let pages: Page[];
+	export { clazz as class, pages };
 </script>
 
 <nav class="z-10">
@@ -12,9 +14,12 @@
 			clazz
 		)}
 	>
-		{#each [{ name: 'Hemo', href: '/' }, ...PAGES] as { name, href }}
+		<li>
+			<a sveltekit:prefetch href="/">Home</a>
+		</li>
+		{#each pages || [] as { title, path }}
 			<li>
-				<a sveltekit:prefetch {href}>{name}</a>
+				<a sveltekit:prefetch href={`/${path || title?.toLowerCase()}`}>{title}</a>
 			</li>
 		{/each}
 		{#if DOMAIN}

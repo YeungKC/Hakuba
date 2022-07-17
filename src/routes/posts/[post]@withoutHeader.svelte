@@ -6,10 +6,10 @@
 	import Article from '$lib/components/Article.svelte';
 	import Labels from '$lib/components/Labels.svelte';
 	import { readableDate } from '$lib/helper/readableDate';
-	import { fetchPost } from '../../lib/helper/fetchPosts';
-	import Giscus from '@giscus/svelte';
-	import BackButton from '../../lib/components/BackButton.svelte';
-	import { REPOSITORY, USER_NAME } from '../../lib/constants';
+	import { fetchPost } from '$lib/helper/fetchPosts';
+	import BackButton from '$lib/components/BackButton.svelte';
+	import Giscus from '$lib/components/Giscus.svelte';
+	import PageMeta from '$lib/components/PageMeta.svelte';
 
 	export const load: Load = async ({ params }) => {
 		try {
@@ -34,17 +34,7 @@
 	const labels = metadata.labels?.map(({ name }) => name);
 </script>
 
-<svelte:head>
-	<title>{metadata.title}</title>
-	<meta property="og:title" content={metadata.title} />
-	{#if metadata.excerpt}
-		<meta name="description" content={metadata.excerpt} />
-		<meta property="og:description" content={metadata.excerpt} />
-	{/if}
-	{#if labels?.length}
-		<meta name="keywords" content={labels.join(',')} />
-	{/if}
-</svelte:head>
+<PageMeta {metadata} />
 
 <Article lang={metadata.lang}>
 	<header class="mb-14 flex flex-col">
@@ -69,19 +59,5 @@
 
 	<svelte:component this={component} />
 
-	<div class="h-16" />
-
-	<Giscus
-		repo={`${USER_NAME}/${REPOSITORY}`}
-		repoId=""
-		category="Post"
-		mapping="number"
-		term={`${metadata.number}`}
-		reactionsEnabled="1"
-		emitMetadata="0"
-		inputPosition="top"
-		theme="light"
-		lang="en"
-		loading="lazy"
-	/>
+	<Giscus config={metadata} />
 </Article>
