@@ -15,7 +15,7 @@ export const DOMAIN = env.VITE_DOMAIN;
 export const DESCRIPTION = env.VITE_DESCRIPTION || env.VITE_BIO;
 export const KEYWORDS = env.VITE_KEYWORDS;
 export const REPOSITORY = env.VITE_REPOSITORY;
-export const LANG = env.VITE_LANG || 'en';
+export const LANGUAGE = env.VITE_LANGUAGE || 'en';
 export const COMMENT = env.VITE_COMMENT || true;
 
 export const REPOSITORY_URL = `https://github.com/${USER_NAME}/${REPOSITORY}`;

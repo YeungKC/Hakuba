@@ -4,10 +4,10 @@ export default interface BasePageType {
 	published: string;
 	number: number;
 	url: string;
-	path?: string;
 	updated?: string | null;
 
 	// custom
+	path?: string;
 	lang?: string;
 	comment?: boolean;
 	excerpt?: string;

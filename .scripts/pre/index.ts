@@ -25,8 +25,8 @@ config.GITHUB_URL = githubUrl;
 	['DESCRIPTION'],
 	['KEYWORDS'],
 	['REPOSITORY'],
+	['LANGUAGE'],
 	['COMMENT']
-	// LANG is not configurable from env
 ].forEach(([key, value]) => {
 	const finalValue = config[key] || env[key] || value;
 	if (!finalValue) return;
