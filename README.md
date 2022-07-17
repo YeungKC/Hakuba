@@ -3,117 +3,125 @@
 # Hakuba
 
 > Hakuba (白馬村 , Hakuba-mura) is a village located in Nagano Prefecture, Japan.
-> If you like nature or skiing, this would be a great place to visit (btw I haven't been there yet...)
+> If you enjoy nature or skiing, this would be a great place to go (btw I haven't been there yet...)
 
-A **fast** blog starter driven by Github discussions for all data.
+A **fast** blogging platform that reads data off GitHub Discussions.
 
-> _[Test its speed now.!!](https://pagespeed.web.dev/report?url=https%3A%2F%2Fhakuba.yeungkc.com%2F)_
+> _[See how fast it is in action!!](https://pagespeed.web.dev/report?url=https%3A%2F%2Fhakuba.yeungkc.com%2F)_
 
-## How to work
+Please star and [fork](https://github.com/YeungKC/Hakuba/fork) if you like it!
 
-Hakuba uses [Github graphql API](https://docs.github.com/en/graphql) with webhook to update the discussion to automatically deploy the blog.
+## How Does It Work
 
-## Quick start
+Hakuba fetches the contents on GitHub Discussions with [GitHub GraphQL API](https://docs.github.com/en/graphql) and webhooks.
+Then renders the actual blog pages from them.
 
-### Clone this repository
+## Quick Start
+
+Recommended hosting services:
+ - [Vercel](https://vercel.com/)
+ - [Netlify](https://app.netlify.com/)
+ - [Cloudflare Pages](https://pages.cloudflare.com/)
+
+Deploy with Vercel:  
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FYeungKC%2FHakuba&env=GITHUB_TOKEN,REPOSITORY&envDescription=Configure%20token%20and%20repository%20name%2C%20see%20https%3A%2F%2Fgithub.com%2FYeungKC%2FHakuba&project-name=blog&repo-name=blog&demo-title=Hakuba&demo-description=A%20fast%20blog%20starter%20driven%20by%20Github%20discussions%20for%20all%20data.&demo-url=https%3A%2F%2Fhakuba.yeungkc.com%2F&demo-image=https%3A%2F%2Fgithub.com%2FYeungKC%2FHakuba%2Fraw%2Fmaster%2Fscreenshots.png)
+
+... or continue scrolling for guide about [manual deployment](#manual-deployment)
+
+### Configuration
+There are various ways to configure it, you can choose to configure it all using environment variables, or partly through discussion.
+
+| Name                                               | Description                                                                                                                                       | Required | env | config |
+| -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | --- | ------ |
+| [GITHUB_TOKEN](https://github.com/settings/tokens) | Require a personal access token with permissions in the `public_repo` scope for public repositories, or the `repo` scope for private ones.        | ✅        | ✅   | ❌      |
+| REPOSITORY                                         | The target repository <!-- TODO: add more details about the format -->                                                                            | ✅        | ✅   | ❌      |
+| PAGE_SIZE                                          | Number Category name of posts for configuration purposes in GitHub Discussion.kof posts per page, 10 at default.                                  | ❌        | ✅   | ✅      |
+| BLOG_NAME                                          | Name of the blog, Hakuba fetches it from GitHub profile if left blank.                                                                            | ❌        | ✅   | ✅      |
+| BIO                                                | Biography of the block, Hakuba fetches it from GitHub profile if left blank.                                                                      | ❌        | ✅   | ✅      |
+| EMAIL                                              | Email for contact in the about section                                                                                                            | ❌        | ✅   | ✅      |
+| TWITTER                                            | Twitter handle without the leading `@` (e.g. SvelteJS)                                                                                            | ❌        | ✅   | ✅      |
+| DOMAIN                                             | Domain of the blog. RSS feed will be disabled if left blank.                                                                                      | ❌        | ✅   | ✅      |
+| DESCRIPTION                                        | Description of the blog in SEO metadata.                                                                                                          | ❌        | ✅   | ✅      |
+| KEYWORDS                                           | Keywords for SEO metadata.                                                                                                                        | ❌        | ✅   | ✅      |
+| COMMENT                                            | Whether to enable comments, `true` at default.                                                                                                    | ❌        | ✅   | ✅      |
+| LANGUAGE                                           | Language of the block in form of [HTML language code](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang). `en` at default. | ❌        | ✅   | ✅      |
+| CONFIG_CATEGORY                                    | Category name of posts for configuration purposes on GitHub Discussion. `Config` at default.                                                      | ❌        | ✅   | ❌      |
+| POST_CATEGORY                                      | Category name of actual posts on GitHub Discussion. `Post` at default.                                                                            | ❌        | ✅   | ❌      |
+| PAGE_CATEGORY                                      | Category name of posts for dedicated pages on GitHub Discussion. `Page` at default.                                                               | ❌        | ✅   | ❌      |
+
+### Setup GitHub Discussions
+
+Create discussions categories for configurations, posts, and pages. Then Set their format to **Announcement**.
+
+> Hakuba supports mdx and HTML `script` tags for pages and posts, so don't make them public-editable.
+
+Only the post named `index` will be used as the main configuration. Here is an [example](https://github.com/YeungKC/Hakuba/discussions/3).
+
+### Setup Webhooks
+
+If you deployed Hakuba using [vercel](https://vercel.com/), [netlify](https://app.netlify.com/) or [Cloudflare Pages](https://pages.cloudflare.com/), update of the contents could be automated with webhooks when discussions are modified.
+
+- Create a new Deploy Hook.
+- Go to the repository settings page to set up the webhook. Select Discussion events.
+
+### Manual Deployment
+
+Clone the repository with `git`:
 
 ```bash
 git clone git@github.com:YeungKC/Hakuba.git
 ```
 
-or [Fork it](https://github.com/YeungKC/Hakuba/fork)
-
-Recommended for deployment using [vercel](https://vercel.com/), [netlify](https://app.netlify.com/) or [Cloudflare Pages](https://pages.cloudflare.com/)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FYeungKC%2FHakuba&env=GITHUB_TOKEN,REPOSITORY&envDescription=Configure%20token%20and%20repository%20name%2C%20see%20https%3A%2F%2Fgithub.com%2FYeungKC%2FHakuba&project-name=blog&repo-name=blog&demo-title=Hakuba&demo-description=A%20fast%20blog%20starter%20driven%20by%20Github%20discussions%20for%20all%20data.&demo-url=https%3A%2F%2Fhakuba.yeungkc.com%2F&demo-image=https%3A%2F%2Fgithub.com%2FYeungKC%2FHakuba%2Fraw%2Fmaster%2Fscreenshots.png)
-
-### Setup config
-
-There are various ways to configure it, you can choose to configure it all using environment variables, or partly through discussion.
-
-| name                                               | desc                                                                                                   | required | env | config |
-| -------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | -------- | --- | ------ |
-| [GITHUB_TOKEN](https://github.com/settings/tokens) | Require the `repo` scope for private repositories and the `public_repo` scope for public repositories. | ✅       | ✅  | ❌     |
-| REPOSITORY                                         | Repository name                                                                                        | ✅       | ✅  | ❌     |
-| PAGE_SIZE                                          | Default 10                                                                                             | ❌       | ✅  | ✅     |
-| BLOG_NAME                                          | Automatically fetches from GitHub profile by default                                                   | ❌       | ✅  | ✅     |
-| BIO                                                | Automatically fetches from GitHub profile by default                                                   | ❌       | ✅  | ✅     |
-| EMAIL                                              | Just a E-mail, for about section                                                                       | ❌       | ✅  | ✅     |
-| TWITTER                                            | Not included @ ! (example: SvelteJS) for about section                                                 | ❌       | ✅  | ✅     |
-| DOMAIN                                             | If the domain is missing, the feed will not be enabled                                                 | ❌       | ✅  | ✅     |
-| DESCRIPTION                                        | For SEO meta data                                                                                      | ❌       | ✅  | ✅     |
-| KEYWORDS                                           | For SEO meta data                                                                                      | ❌       | ✅  | ✅     |
-| COMMENT                                            | Whether to enable comments, default true                                                               | ❌       | ✅  | ✅     |
-| LANGUAGE                                           | For html tag, Default en                                                                               | ❌       | ✅  | ✅     |
-| CONFIG_CATEGORY                                    | Default Config                                                                                         | ❌       | ✅  | ❌     |
-| POST_CATEGORY                                      | Default Post                                                                                           | ❌       | ✅  | ❌     |
-| PAGE_CATEGORY                                      | Default Page                                                                                           | ❌       | ✅  | ❌     |
-
-### Discussion config
-
-Create the categories and set it to **Announcement**.
-
-> Page and Post actually support mdx and `script` tags, so don't make the writing permissions public.
-
-Only title is index will be recognized as config, here is a [example](https://github.com/YeungKC/Hakuba/discussions/3).
-
-### Deploy
+Then, generate the pages:
 
 ```bash
-# Choose one of them
+# Run any one of them
 
 yarn build
 npm run build
 pnpm build
 ```
 
-Deploy the build directory to your server.
+Finally, upload the `build` directory to your web server.
 
-## More info
+## Additional Settings for Pages and Posts
 
-Page and post support front matter settings or override some information.
+Pages and posts support Markdown front matter for metadata and configuration overrides.
 
-### Page front matter
+### Front matter for pages
 
-Here is a [example](https://github.com/YeungKC/Hakuba/discussions/58)
+Here is an [example](https://github.com/YeungKC/Hakuba/discussions/58)
 
-| name     | desc                       |
-| -------- | -------------------------- |
-| lang     | For html tag               |
-| comment  | Whether to enable comments |
-| priority | Priority of navigation     |
-| path     | Path of the page           |
-| excerpt  | For SEO meta data          |
+| name     | desc                                                  |
+| -------- | ----------------------------------------------------- |
+| lang     | Language of the post in the form of html language tag |
+| comment  | Whether to enable comments                            |
+| priority | Priority for indexing                                 |
+| path     | Path to the page                                      |
+| excerpt  | Excerpt of the page for SEO metadata                  |
 
 ### Post front matter
 
-Here is a [example](https://github.com/YeungKC/Hakuba/discussions/58)
+Here is an [example](https://github.com/YeungKC/Hakuba/discussions/58)
 
-| name      | desc                                                |
-| --------- | --------------------------------------------------- |
-| lang      | For html tag                                        |
-| comment   | Whether to enable comments                          |
-| path      | Path of the page                                    |
-| excerpt   | For SEO meta data                                   |
-| title     | Just a title, default use title of discussion       |
-| published | Published date, default use published of discussion |
-| updated   | Updated date, default use updated of discussion     |
+| name      | desc                                                                                         |
+| --------- | -------------------------------------------------------------------------------------------- |
+| lang      | Language of the post in the form of html language tag                                        |
+| comment   | Whether to enable comments                                                                   |
+| path      | Path to the post                                                                             |
+| excerpt   | Excerpt of the page for SEO metadata                                                         |
+| title     | Title of the post. Hakuba uses the title of the discussion post at default.                  |
+| published | Date published. Hakuba uses the date of the discussion post at default.                      |
+| updated   | Date updated. Hakuba uses the latest date of modification of the discussion post at default. |
 
-## Deploy Hooks
+## Dependabot Auto Merge
 
-If you deploy using [vercel](https://vercel.com/), [netlify](https://app.netlify.com/) or [Cloudflare Pages](https://pages.cloudflare.com/), you can automate the deployment via webhook, which will automatically deploy whenever new discussions are modified.
+This project uses [action-dependabot-auto-merge](https://github.com/ahmadnassri/action-dependabot-auto-merge#token-scope) for updating dependencies automatically. If there is a CI failure, try to configure Dependabot secrets.
 
-- Create a new Deploy Hooks.
-- Go to the repository settings page to set up the webhook and just select Discussion event.
+## Credits
 
-## Auto merge
-
-This project using [action-dependabot-auto-merge](https://github.com/ahmadnassri/action-dependabot-auto-merge#token-scope), If there is a CI failure, configure Dependabot secrets.
-
-## Thanks
-
-- [hexo-theme-cactus](https://github.com/probberechts/hexo-theme-cactus), I have used this theme for a long time before, current theme is also influenced by it.
+- [hexo-theme-cactus](https://github.com/probberechts/hexo-theme-cactus), I have used this theme for a long time, it has inspired the current theme of Hakuba.
 
 ## License
 
-GPL-3.0 license
+GPL-3.0
