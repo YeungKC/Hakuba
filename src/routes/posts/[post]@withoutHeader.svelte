@@ -18,6 +18,9 @@
 				throw new Error('Post not found');
 			}
 
+			post.metadata.published = readableDate(post.metadata.published);
+			if (post.metadata.updated) post.metadata.updated = readableDate(post.metadata.updated);
+
 			return {
 				props: post
 			};
@@ -32,12 +35,6 @@
 	export let metadata: Post;
 
 	const labels = metadata.labels?.map(({ name }) => name);
-
-	$: published = readableDate(metadata.published);
-	$: updated = metadata.updated && readableDate(metadata.updated);
-	$: {
-		updated = updated === published ? undefined : updated;
-	}
 </script>
 
 <PageMeta {metadata} />
@@ -52,11 +49,11 @@
 			class="flex flex-col justify-center [&_*]:!text-sm [&_*]:!font-normal [&_*]:!text-slate-600 "
 		>
 			<span class=" mt-4 self-start border-t border-t-slate-900 pt-2">
-				Published: {published}
+				Published: {metadata.published}
 			</span>
-			{#if updated}
+			{#if metadata.updated && metadata.updated !== metadata.published}
 				<span>
-					Updated: &nbsp;&nbsp;{updated}
+					Updated: &nbsp;&nbsp;{metadata.updated}
 				</span>
 			{/if}
 			<Labels {labels} />
