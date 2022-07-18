@@ -10,6 +10,7 @@ export interface DiscussionsType {
 	number: number;
 	title: string;
 	createdAt: string;
+	publishedAt: string;
 	lastEditedAt?: string;
 	url: string;
 	body: string;
