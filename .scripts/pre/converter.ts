@@ -15,7 +15,7 @@ export const convertFrontMatter = (list: DiscussionsType[]) =>
 		const frontMatter = {
 			number: node.number,
 			title: node.title,
-			published: node.publishedAt,
+			published: node.createdAt,
 			updated: node.lastEditedAt,
 			url: node.url,
 			labels: node.labels.nodes,

@@ -55,7 +55,6 @@ export const fetchDiscussions = async (owner: string, after?: string) => {
         number
         title
         createdAt
-		publishedAt
         lastEditedAt
         url
         body

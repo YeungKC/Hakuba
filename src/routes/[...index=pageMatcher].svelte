@@ -26,6 +26,14 @@
 
 		const basePath = label ? `/labels/${label}/page/` : '/page/';
 
+		const buildTitle = (selected: string | undefined, currentPage: number) => {
+			let title = `${BLOG_NAME}`;
+
+			if (selected) title = `${title} - Lbael ${selected}`;
+			if (currentPage > 1) title = `${title} - Page ${currentPage}`;
+			return title;
+		};
+
 		return {
 			props: {
 				selected: label,
@@ -33,7 +41,8 @@
 				posts: list.map(({ metadata }) => metadata),
 				totalCount,
 				currentPage,
-				basePath
+				basePath,
+				title: buildTitle(label, currentPage)
 			}
 		};
 	};
@@ -46,16 +55,7 @@
 	export let posts: Post[];
 	export let totalCount: number;
 	export let basePath: string;
-
-	const buildTitle = (selected: string | undefined, currentPage: number) => {
-		let title = `${BLOG_NAME}`;
-
-		if (selected) title = `${title} - Lbael ${selected}`;
-		if (currentPage > 1) title = `${title} - Page ${currentPage}`;
-		return title;
-	};
-
-	$: title = buildTitle(selected, currentPage);
+	export let title: string;
 </script>
 
 <svelte:head>
