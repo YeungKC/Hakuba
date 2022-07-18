@@ -5,7 +5,7 @@
 > Hakuba (白馬村 , Hakuba-mura) is a village located in Nagano Prefecture, Japan.
 > If you enjoy nature or skiing, this would be a great place to go (btw I haven't been there yet...)
 
-A **fast** blogging platform that reads data off GitHub Discussions.
+A **fast** blog starter that reads data off GitHub Discussions.
 
 > _[See how fast it is in action!!](https://pagespeed.web.dev/report?url=https%3A%2F%2Fhakuba.yeungkc.com%2F)_
 
@@ -119,6 +119,14 @@ Here is an [example](https://github.com/YeungKC/Hakuba/discussions/58)
 ## Dependabot Auto Merge
 
 This project uses [action-dependabot-auto-merge](https://github.com/ahmadnassri/action-dependabot-auto-merge#token-scope) for updating dependencies automatically. If there is a CI failure, try to configure Dependabot secrets.
+
+## Roadmap
+
+- [ ] Design a logo.
+- [ ] Page transitions.
+- [ ] Pre-download resources.
+- [ ] Lazy load images.
+- [ ] Dark mode.
 
 ## Credits
 
