@@ -1,8 +1,24 @@
-<script>
+<script context="module" lang="ts">
 	import '../app.css';
 	import '../code.css';
 	import Footer from '$lib/components/Footer.svelte';
 	import { BLOG_NAME, DESCRIPTION, KEYWORDS, TWITTER } from '$lib/constants';
+	import type { Load } from '@sveltejs/kit';
+	import { fetchPages } from '$lib/helper/fetchPage';
+	import type Page from '$lib/types/page';
+
+	export const load: Load = async ({ params }) => {
+		const pages = await fetchPages();
+		return {
+			props: {
+				pages: pages.map(({ metadata }) => metadata)
+			}
+		};
+	};
+</script>
+
+<script lang="ts">
+	export let pages: Page[];
 </script>
 
 <svelte:head>
@@ -25,4 +41,4 @@
 	<slot />
 </main>
 
-<Footer />
+<Footer {pages} />
