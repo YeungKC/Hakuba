@@ -36,7 +36,7 @@ There are various ways to configure it, you can choose to configure it all using
 | Name                                               | Description                                                                                                                                       | Required | env | config |
 | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | --- | ------ |
 | [GITHUB_TOKEN](https://github.com/settings/tokens) | Require a personal access token with permissions in the `public_repo` scope for public repositories, or the `repo` scope for private ones.        | ✅       | ✅  | ❌     |
-| REPOSITORY                                         | The target repository <!-- TODO: add more details about the format -->                                                                            | ✅       | ✅  | ❌     |
+| REPOSITORY                                         | The target repository                                                                                                                             | ✅       | ✅  | ❌     |
 | PAGE_SIZE                                          | Number Category name of posts for configuration purposes in GitHub Discussion.kof posts per page, 10 at default.                                  | ❌       | ✅  | ✅     |
 | BLOG_NAME                                          | Name of the blog, Hakuba fetches it from GitHub profile if left blank.                                                                            | ❌       | ✅  | ✅     |
 | BIO                                                | Biography of the block, Hakuba fetches it from GitHub profile if left blank.                                                                      | ❌       | ✅  | ✅     |
@@ -99,7 +99,7 @@ Here is an [example](https://github.com/YeungKC/Hakuba/discussions/58)
 | lang     | Language of the post in the form of html language tag |
 | comment  | Whether to enable comments                            |
 | priority | Priority for indexing                                 |
-| path     | Path to the page                                      |
+| path     | Path to the page, use all lowercase title by default  |
 | excerpt  | Excerpt of the page for SEO metadata                  |
 
 ### Post front matter
