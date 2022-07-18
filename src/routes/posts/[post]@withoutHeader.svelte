@@ -32,6 +32,12 @@
 	export let metadata: Post;
 
 	const labels = metadata.labels?.map(({ name }) => name);
+
+	$: published = readableDate(metadata.published);
+	$: updated = metadata.updated && readableDate(metadata.updated);
+	$: {
+		updated = updated === published ? undefined : updated;
+	}
 </script>
 
 <PageMeta {metadata} />
@@ -46,11 +52,11 @@
 			class="flex flex-col justify-center [&_*]:!text-sm [&_*]:!font-normal [&_*]:!text-slate-600 "
 		>
 			<span class=" mt-4 self-start border-t border-t-slate-900 pt-2">
-				Published: {readableDate(metadata.published)}
+				Published: {published}
 			</span>
-			{#if metadata.updated}
+			{#if updated}
 				<span>
-					Updated: &nbsp;&nbsp;{readableDate(metadata.updated)}
+					Updated: &nbsp;&nbsp;{updated}
 				</span>
 			{/if}
 			<Labels {labels} />
