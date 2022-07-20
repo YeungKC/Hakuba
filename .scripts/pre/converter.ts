@@ -26,6 +26,8 @@ export const convertFrontMatter = (list: DiscussionsType[], config: Record<strin
 				.format(config.DATE_FORMAT);
 		};
 
+		console.log(`node.publishedAt`, node.publishedAt, format(node.publishedAt));
+
 		const frontMatter: Page | Post = {
 			number: node.number,
 			title: node.title,
