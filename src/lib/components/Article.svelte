@@ -1,4 +1,5 @@
 <script lang="ts">
+	import '../../code.css';
 	export let lang: string | undefined = undefined;
 </script>
 
