@@ -17,6 +17,7 @@ export const KEYWORDS = env.VITE_KEYWORDS;
 export const REPOSITORY = env.VITE_REPOSITORY;
 export const LANGUAGE = env.VITE_LANGUAGE || 'en';
 export const COMMENT = env.VITE_COMMENT || true;
+export const TIME_ZONE = env.VITE_TIME_ZONE || 'GMT';
 
 export const REPOSITORY_URL = `https://github.com/${USER_NAME}/${REPOSITORY}`;
 export const REPOSITORY_ISSUES_URL = `${REPOSITORY_URL}/issues`;

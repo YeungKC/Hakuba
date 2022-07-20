@@ -18,11 +18,13 @@
 				throw new Error('Post not found');
 			}
 
-			post.metadata.published = readableDate(post.metadata.published);
-			if (post.metadata.updated) post.metadata.updated = readableDate(post.metadata.updated);
-
 			return {
-				props: post
+				props: {
+					...post,
+					labels: post.metadata.labels?.map(({ name }) => name),
+					published: readableDate(post.metadata.published),
+					updated: post.metadata.updated ? readableDate(post.metadata.updated) : undefined
+				}
 			};
 		} catch {
 			return { status: 404 };
@@ -33,8 +35,9 @@
 <script lang="ts">
 	export let component: SvelteComponent;
 	export let metadata: Post;
-
-	const labels = metadata.labels?.map(({ name }) => name);
+	export let labels: string[] | undefined;
+	export let published: string | undefined;
+	export let updated: string | undefined;
 </script>
 
 <PageMeta {metadata} />
@@ -49,11 +52,11 @@
 			class="flex flex-col justify-center [&_*]:!text-sm [&_*]:!font-normal [&_*]:!text-slate-600 "
 		>
 			<span class=" mt-4 self-start border-t border-t-slate-900 pt-2">
-				Published: {metadata.published}
+				Published: {published}
 			</span>
-			{#if metadata.updated && metadata.updated !== metadata.published}
+			{#if updated && updated !== published}
 				<span>
-					Updated: &nbsp;&nbsp;{metadata.updated}
+					Updated: &nbsp;&nbsp;{updated}
 				</span>
 			{/if}
 			<Labels {labels} />

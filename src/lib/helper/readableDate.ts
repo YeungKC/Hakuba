@@ -1,13 +1,9 @@
-export const readableDate = (dateText: string) => {
-	const date = new Date(dateText);
-	const year = date.getFullYear();
-	let month: string | number = date.getMonth() + 1;
-	let strDate: string | number = date.getDate();
-	if (month >= 1 && month <= 9) {
-		month = '0' + month;
-	}
-	if (strDate >= 0 && strDate <= 9) {
-		strDate = '0' + strDate;
-	}
-	return year + '-' + month + '-' + strDate;
-};
+import { TIME_ZONE } from '../constants';
+
+export const readableDate = (dateText: string) =>
+	new Date(dateText).toLocaleDateString('sv', {
+		timeZone: TIME_ZONE,
+		month: '2-digit',
+		day: '2-digit',
+		year: 'numeric'
+	});
