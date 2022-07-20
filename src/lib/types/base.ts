@@ -4,7 +4,10 @@ export default interface BasePageType {
 	published: string;
 	number: number;
 	url: string;
-	updated?: string | null;
+	updated?: string;
+
+	formattedOfPublished: string;
+	formattedOfUpdated?: string;
 
 	// custom
 	path?: string;

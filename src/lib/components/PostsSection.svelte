@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { readableDate } from '$lib/helper/readableDate';
 	import type Post from '$lib/types/post';
 
 	export let posts: Post[];
@@ -12,7 +11,7 @@
 <ul class="flex flex-col gap-1">
 	{#each posts as post (post.number)}
 		<li class="flex flex-row items-center gap-6">
-			<div class="shrink-0 text-slate-500">{readableDate(post.published)}</div>
+			<div class="shrink-0 text-slate-500">{post.formattedOfPublished}</div>
 			<a
 				sveltekit:prefetch
 				class="truncate py-1 underline"

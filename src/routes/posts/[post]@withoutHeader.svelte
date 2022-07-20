@@ -5,7 +5,6 @@
 	import type Post from '$lib/types/post';
 	import Article from '$lib/components/Article.svelte';
 	import Labels from '$lib/components/Labels.svelte';
-	import { readableDate } from '$lib/helper/readableDate';
 	import { fetchPost } from '$lib/helper/fetchPosts';
 	import BackButton from '$lib/components/BackButton.svelte';
 	import Giscus from '$lib/components/Giscus.svelte';
@@ -17,9 +16,6 @@
 			if (!post) {
 				throw new Error('Post not found');
 			}
-
-			post.metadata.published = readableDate(post.metadata.published);
-			if (post.metadata.updated) post.metadata.updated = readableDate(post.metadata.updated);
 
 			return {
 				props: post
@@ -49,11 +45,11 @@
 			class="flex flex-col justify-center [&_*]:!text-sm [&_*]:!font-normal [&_*]:!text-slate-600 "
 		>
 			<span class=" mt-4 self-start border-t border-t-slate-900 pt-2">
-				Published: {metadata.published}
+				Published: {metadata.formattedOfPublished}
 			</span>
-			{#if metadata.updated && metadata.updated !== metadata.published}
+			{#if metadata.formattedOfUpdated && metadata.formattedOfUpdated !== metadata.formattedOfPublished}
 				<span>
-					Updated: &nbsp;&nbsp;{metadata.updated}
+					Updated: &nbsp;&nbsp;{metadata.formattedOfUpdated}
 				</span>
 			{/if}
 			<Labels {labels} />

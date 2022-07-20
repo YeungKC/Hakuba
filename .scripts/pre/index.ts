@@ -26,14 +26,16 @@ config.GITHUB_URL = githubUrl;
 	['KEYWORDS'],
 	['REPOSITORY'],
 	['LANGUAGE'],
-	['COMMENT']
+	['COMMENT'],
+	['UTC_OFFSET', '0'],
+	['DATE_FORMAT', 'YYYY-MM-DD']
 ].forEach(([key, value]) => {
 	const finalValue = config[key] || env[key] || value;
 	if (!finalValue) return;
 	config[key] = finalValue;
 });
 
-list = convertFrontMatter(list);
+list = convertFrontMatter(list, config);
 
 const pages = filterPage(list);
 const posts = filterPost(list);

@@ -58,5 +58,8 @@
 		"vite": "^2.9.13",
 		"yaml": "^2.1.1"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"dayjs": "^1.11.4"
+	}
 }
