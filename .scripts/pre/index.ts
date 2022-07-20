@@ -35,6 +35,8 @@ config.GITHUB_URL = githubUrl;
 	config[key] = finalValue;
 });
 
+console.log('env.DATE_FORMAT', env.DATE_FORMAT);
+
 list = convertFrontMatter(list, config);
 
 const pages = filterPage(list);
