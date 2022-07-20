@@ -148,9 +148,9 @@
     picomatch "^2.2.2"
 
 "@sveltejs/adapter-static@next":
-  version "1.0.0-next.37"
-  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-static/-/adapter-static-1.0.0-next.37.tgz#67e8dee893a4fa77e0a0bc221831ad709012db68"
-  integrity sha512-BDFkx4CGAd6pG4e3+zYjy/eM9UDbhkRgXqavUzCO5oT8xXao5TeprY1AIbdzjMTmFjsWdeSXE9TbIsT0iikpyQ==
+  version "1.0.0-next.38"
+  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-static/-/adapter-static-1.0.0-next.38.tgz#3c1638c062f7e205cdea99d1fa5534551ef20cb9"
+  integrity sha512-O1b264K62E3OrUnsFxMjKn3CUJF50fxGcW0rWk8fa5kjzskPsSyTxS3jnWNryFaVJ3oSUtx57m4qFW43S1910Q==
   dependencies:
     tiny-glob "^0.2.9"
 
