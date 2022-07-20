@@ -2,7 +2,7 @@ import { TIME_ZONE } from '../constants';
 
 export const readableDate = (dateText: string) =>
 	new Date(dateText)
-		.toLocaleDateString(undefined, {
+		.toLocaleDateString('iso', {
 			timeZone: TIME_ZONE,
 			month: '2-digit',
 			day: '2-digit',
