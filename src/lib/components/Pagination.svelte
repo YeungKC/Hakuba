@@ -49,7 +49,7 @@
 			<img src={chevronLeft} alt="Previous" width="6" height="6" />
 		</a>
 	{/if}
-	{#each array as e}
+	{#each array as e (e)}
 		{#if typeof e === 'string'}
 			<span>...</span>
 		{/if}

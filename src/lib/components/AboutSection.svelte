@@ -16,7 +16,7 @@
 	<p>{BIO}</p>
 	{#if components.length}
 		<p class="flex flex-row items-center gap-1">
-			Find me on {#each components as component, index}
+			Find me on {#each components as component, index (component)}
 				<svelte:component this={component} />
 				{index < components.length - 2 ? ', ' : ''}
 				{index === components.length - 2 ? ' and ' : ''}

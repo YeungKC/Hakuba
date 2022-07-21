@@ -17,7 +17,7 @@
 		<li>
 			<a sveltekit:prefetch href="/">Home</a>
 		</li>
-		{#each pages || [] as { title, path }}
+		{#each pages || [] as { title, path } (title)}
 			<li>
 				<a sveltekit:prefetch href={`/${path || title?.toLowerCase()}`}>{title}</a>
 			</li>

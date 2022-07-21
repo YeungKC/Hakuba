@@ -10,7 +10,7 @@
 
 {#if labels?.length}
 	<div class={clsx('flex flex-row flex-wrap items-center gap-2', clazz)}>
-		{#each labels ?? [] as label, index}
+		{#each labels ?? [] as label, index (typeof label === 'string' ? label : label?.[0])}
 			<span>
 				<Label {label} {selected} />{index === labels.length - 1 ? '' : ', '}
 			</span>
