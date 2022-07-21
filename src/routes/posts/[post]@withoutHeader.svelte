@@ -45,19 +45,19 @@
 <Article lang={metadata.lang}>
 	<header class="mb-14 flex flex-col">
 		<Header class="group relative">
-			{metadata.title}
 			<BackButton />
+			{metadata.title}
 		</Header>
 		<div
 			class="flex flex-col justify-center [&_*]:!text-sm [&_*]:!font-normal [&_*]:!text-slate-600 "
 		>
-			<span class=" mt-4 self-start border-t border-t-slate-900 pt-2">
+			<div class=" mt-4 self-start border-t border-t-slate-900 pt-2">
 				Published: {published}
-			</span>
+			</div>
 			{#if updated && updated !== published}
-				<span>
+				<div>
 					Updated: &nbsp;&nbsp;{updated}
-				</span>
+				</div>
 			{/if}
 			<Labels {labels} />
 		</div>
