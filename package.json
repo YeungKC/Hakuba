@@ -44,7 +44,7 @@
 		"prettier-plugin-tailwindcss": "^0.1.12",
 		"rehype-add-classes": "^1.0.0",
 		"rehype-autolink-headings": "^6.1.1",
-		"rehype-external-links": "^1.0.1",
+		"rehype-external-links": "^2.0.0",
 		"rehype-slug": "^5.0.1",
 		"rollup-plugin-visualizer": "^5.7.1",
 		"svelte": "^3.49.0",
