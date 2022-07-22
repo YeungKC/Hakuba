@@ -6,4 +6,22 @@
 	a > span.icon.icon-link {
 		@apply relative opacity-0 transition before:absolute before:-left-[1.5ch] before:pr-[1.5ch] before:content-['#'] group-hover:opacity-100 [@media(any-hover:none)]:opacity-100;
 	}
+
+	/* css page scrollbar toggle center no jumping */
+	html {
+		@apple overflow-y-scroll;
+	}
+
+	:root {
+		@apply overflow-y-auto overflow-x-hidden;
+	}
+
+	:root body {
+		@apply absolute;
+	}
+
+	body {
+		@apply w-screen overflow-hidden;
+	}
+	/* css page scrollbar toggle center no jumping */
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="h-full" lang="%lang%">
+<html lang="%lang%">
 	<head>
 		<meta charset="utf-8" />
 		<!-- <link rel="icon" href="%sveltekit.assets%/favicon.png" /> -->
@@ -7,9 +7,11 @@
 		%sveltekit.head%
 	</head>
 
-	<body
-		class="container flex min-h-full max-w-screen-md flex-col bg-slate-50 px-8 pt-16 text-sm text-slate-900"
-	>
-		%sveltekit.body%
+	<body class="bg-slate-50">
+		<div
+			class="container flex min-h-screen max-w-screen-md flex-col px-8 pt-16 text-sm text-slate-900"
+		>
+			%sveltekit.body%
+		</div>
 	</body>
 </html>
