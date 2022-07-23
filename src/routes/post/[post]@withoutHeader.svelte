@@ -18,12 +18,16 @@
 				throw new Error('Post not found');
 			}
 
+			const metadata = post.metadata;
+
+			const timezone = metadata.timezone;
+
 			return {
 				props: {
 					...post,
-					labels: post.metadata.labels?.map(({ name }) => name),
-					published: readableDate(post.metadata.published),
-					updated: post.metadata.updated ? readableDate(post.metadata.updated) : undefined
+					labels: metadata.labels?.map(({ name }) => name),
+					published: readableDate(metadata.published, timezone),
+					updated: metadata.updated ? readableDate(metadata.updated, timezone) : undefined
 				}
 			};
 		} catch {
