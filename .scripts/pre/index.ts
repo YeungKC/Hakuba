@@ -17,7 +17,7 @@ config.GITHUB_URL = githubUrl;
 
 [
 	['PAGE_SIZE'],
-	['BLOG_NAME', `${user}'s Blog`],
+	['BLOG_NAME'],
 	['BIO', bio],
 	['EMAIL'],
 	['TWITTER'],
@@ -27,7 +27,7 @@ config.GITHUB_URL = githubUrl;
 	['REPOSITORY'],
 	['LANGUAGE'],
 	['COMMENT'],
-	['TIME_ZONE']
+	['TIMEZONE']
 ].forEach(([key, value]) => {
 	const finalValue = config[key] || env[key] || value;
 	if (!finalValue) return;
