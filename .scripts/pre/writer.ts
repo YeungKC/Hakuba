@@ -3,7 +3,7 @@ import { mkdirSync, promises } from 'fs';
 import { DiscussionsType } from './types';
 
 export const writePosts = async (list: DiscussionsType[]) => {
-	const dir = path.join('./src/routes/posts/_source');
+	const dir = path.join('./src/routes/post/_source');
 	mkdirSync(dir, { recursive: true });
 
 	await Promise.all(

@@ -16,7 +16,7 @@
 			<a
 				sveltekit:prefetch
 				class="truncate py-1 underline"
-				href={`/posts/${post.path || post.number}`}>{post.title}</a
+				href={`/post/${post.path || post.number}`}>{post.title}</a
 			>
 		</li>
 	{/each}

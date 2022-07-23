@@ -10,7 +10,7 @@ node_modules
 yarn-error.log
 report.html
 
-/src/routes/posts/_source
+/src/routes/post/_source
 
 /src/routes/_page/*.md
 !/src/routes/_page/__error.md

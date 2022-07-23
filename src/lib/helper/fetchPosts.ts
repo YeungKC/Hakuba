@@ -8,7 +8,7 @@ export const fetchPosts = async ({
 }: { offset?: number; limit?: number; label?: string } = {}) => {
 	let allPosts = (
 		await Promise.all(
-			Object.entries(import.meta.glob('../../routes/posts/_source/*.md')).map(async ([, page]) => {
+			Object.entries(import.meta.glob('../../routes/post/_source/*.md')).map(async ([, page]) => {
 				const { metadata, default: component } = await page();
 				return {
 					metadata: metadata as Post,
