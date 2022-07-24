@@ -33,10 +33,15 @@ Deploy with Vercel:
 
 There are various ways to configure it, you can choose to configure it all using environment variables, or partly through discussion.
 
+> If configured blog through discussion, title must be `index`, category must be `CONFIG_CATEGORY`, Here is an [example](https://github.com/YeungKC/Hakuba/discussions/categories/config).
+
 | Name                                               | Description                                                                                                                                       | Required | env | config |
 | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | --- | ------ |
 | [GITHUB_TOKEN](https://github.com/settings/tokens) | Require a personal access token with permissions in the `public_repo` scope for public repositories, or the `repo` scope for private ones.        | ✅       | ✅  | ❌     |
 | REPOSITORY                                         | The target repository                                                                                                                             | ✅       | ✅  | ❌     |
+| CONFIG_CATEGORY                                    | Category name of posts for configuration purposes on GitHub Discussion. `Config` at default.                                                      | ❌       | ✅  | ❌     |
+| POST_CATEGORY                                      | Category name of actual posts on GitHub Discussion. `Post` at default.                                                                            | ❌       | ✅  | ❌     |
+| PAGE_CATEGORY                                      | Category name of posts for dedicated pages on GitHub Discussion. `Page` at default.                                                               | ❌       | ✅  | ❌     |
 | PAGE_SIZE                                          | Number Category name of posts for configuration purposes in GitHub Discussion.kof posts per page, 10 at default.                                  | ❌       | ✅  | ✅     |
 | BLOG_NAME                                          | Name of the blog, Hakuba fetches it from GitHub profile if left blank.                                                                            | ❌       | ✅  | ✅     |
 | BIO                                                | Biography of the block, Hakuba fetches it from GitHub profile if left blank.                                                                      | ❌       | ✅  | ✅     |
@@ -48,15 +53,12 @@ There are various ways to configure it, you can choose to configure it all using
 | COMMENT                                            | Whether to enable comments, `true` at default.                                                                                                    | ❌       | ✅  | ✅     |
 | LANGUAGE                                           | Language of the block in form of [HTML language code](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang). `en` at default. | ❌       | ✅  | ✅     |
 | TIMEZONE                                           | Timezone of `Date.prototype.toLocaleDateString(locals, options)`, `GMT` at default.                                                               | ❌       | ✅  | ✅     |
-| CONFIG_CATEGORY                                    | Category name of posts for configuration purposes on GitHub Discussion. `Config` at default.                                                      | ❌       | ✅  | ❌     |
-| POST_CATEGORY                                      | Category name of actual posts on GitHub Discussion. `Post` at default.                                                                            | ❌       | ✅  | ❌     |
-| PAGE_CATEGORY                                      | Category name of posts for dedicated pages on GitHub Discussion. `Page` at default.                                                               | ❌       | ✅  | ❌     |
 
 ### Setup GitHub Discussions
 
 Create discussions categories for configurations, posts, and pages. Then Set their format to **Announcement**.
 
-> Hakuba supports mdx and HTML `script` tags for pages and posts, so don't make them public-editable.
+> Hakuba supports mdx and HTML `script` tags for pages and posts, so don't make them public-editable❗❗❗
 
 Only the post named `index` will be used as the main configuration. Here is an [example](https://github.com/YeungKC/Hakuba/discussions/3).
 
@@ -93,6 +95,10 @@ Pages and posts support Markdown front matter for metadata and configuration ove
 
 ### Front matter for pages
 
+Added page will be displayed in navigation.
+
+> If you added page title is `__error`, it will be replaced the error page.
+
 Here is an [example](https://github.com/YeungKC/Hakuba/discussions/58)
 
 | name     | desc                                                  |
@@ -107,15 +113,24 @@ Here is an [example](https://github.com/YeungKC/Hakuba/discussions/58)
 
 Here is an [example](https://github.com/YeungKC/Hakuba/discussions/58)
 
-| name      | desc                                                                                         |
-| --------- | -------------------------------------------------------------------------------------------- |
-| lang      | Language of the post in the form of html language tag                                        |
-| comment   | Whether to enable comments                                                                   |
-| path      | Path to the post                                                                             |
-| excerpt   | Excerpt of the page for SEO metadata                                                         |
-| title     | Title of the post. Hakuba uses the title of the discussion post at default.                  |
-| published | Date published. Hakuba uses the date of the discussion post at default.                      |
-| updated   | Date updated. Hakuba uses the latest date of modification of the discussion post at default. |
+| name      | desc                                                                                            |
+| --------- | ----------------------------------------------------------------------------------------------- |
+| lang      | Language of the post in the form of html language tag                                           |
+| comment   | Whether to enable comments                                                                      |
+| path      | Path to the post                                                                                |
+| excerpt   | Excerpt of the page for SEO metadata                                                            |
+| title     | Title of the post. Hakuba uses the title of the discussion post at default.                     |
+| published | Date published. Hakuba uses the date of the discussion post at default.                         |
+| updated   | Date updated. Hakuba uses the latest date of modification of the discussion post at default.    |
+| timezone  | Timezone of `Date.prototype.toLocaleDateString(locals, options)`, `config.TIMEZONE` at default. |
+
+#### Limitations
+
+Because use [Mdsvex](https://mdsvex.com/) to preprocess the markdown, the following limitations apply:
+
+> In markdown you can begin a code block by indenting 4 spaces. This doesn’t work in mdsvex as indentation is common with XML-based languages. Indenting 4 spaces will do nothing.
+
+see also: <https://mdsvex.com/docs#limitations>
 
 ## Dependabot Auto Merge
 
