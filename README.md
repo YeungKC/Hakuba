@@ -5,7 +5,7 @@
 [中文版介绍](https://yeungkc.com/post/3)
 
 > Hakuba (白馬村 , Hakuba-mura) is a village located in Nagano Prefecture, Japan.
-> If you enjoy hiking and climbing, skiing and other activities, this would be a great place to go (btw I haven't been there yet...)
+> If you enjoy hiking or climbing, skiing or other activities, this would be a great place to go (btw I haven't been there yet...)
 
 A **fast** blog starter that reads data off GitHub Discussions.
 
