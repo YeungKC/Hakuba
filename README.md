@@ -2,8 +2,10 @@
 
 # Hakuba
 
+[中文版介绍](https://yeungkc.com/post/3)
+
 > Hakuba (白馬村 , Hakuba-mura) is a village located in Nagano Prefecture, Japan.
-> If you enjoy nature or skiing, this would be a great place to go (btw I haven't been there yet...)
+> If you enjoy hiking and climbing, skiing and other activities, this would be a great place to go (btw I haven't been there yet...)
 
 A **fast** blog starter that reads data off GitHub Discussions.
 
@@ -35,24 +37,24 @@ There are various ways to configure it, you can choose to configure it all using
 
 > If configured blog through discussion, title must be `index`, category must be `CONFIG_CATEGORY`, Here is an [example](https://github.com/YeungKC/Hakuba/discussions/categories/config).
 
-| Name                                               | Description                                                                                                                                       | Required | env | config |
-| -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | --- | ------ |
-| [GITHUB_TOKEN](https://github.com/settings/tokens) | Require a personal access token with permissions in the `public_repo` scope for public repositories, or the `repo` scope for private ones.        | ✅       | ✅  | ❌     |
-| REPOSITORY                                         | The target repository                                                                                                                             | ✅       | ✅  | ❌     |
-| CONFIG_CATEGORY                                    | Category name of posts for configuration purposes on GitHub Discussion. `Config` at default.                                                      | ❌       | ✅  | ❌     |
-| POST_CATEGORY                                      | Category name of actual posts on GitHub Discussion. `Post` at default.                                                                            | ❌       | ✅  | ❌     |
-| PAGE_CATEGORY                                      | Category name of posts for dedicated pages on GitHub Discussion. `Page` at default.                                                               | ❌       | ✅  | ❌     |
-| PAGE_SIZE                                          | Number Category name of posts for configuration purposes in GitHub Discussion.kof posts per page, 10 at default.                                  | ❌       | ✅  | ✅     |
-| BLOG_NAME                                          | Name of the blog, Hakuba fetches it from GitHub profile if left blank.                                                                            | ❌       | ✅  | ✅     |
-| BIO                                                | Biography of the block, Hakuba fetches it from GitHub profile if left blank.                                                                      | ❌       | ✅  | ✅     |
-| EMAIL                                              | Email for contact in the about section                                                                                                            | ❌       | ✅  | ✅     |
-| TWITTER                                            | Twitter handle without the leading `@` (e.g. SvelteJS)                                                                                            | ❌       | ✅  | ✅     |
-| DOMAIN                                             | Domain of the blog. RSS feed will be disabled if left blank.                                                                                      | ❌       | ✅  | ✅     |
-| DESCRIPTION                                        | Description of the blog in SEO metadata.                                                                                                          | ❌       | ✅  | ✅     |
-| KEYWORDS                                           | Keywords for SEO metadata.                                                                                                                        | ❌       | ✅  | ✅     |
-| COMMENT                                            | Whether to enable comments, `true` at default.                                                                                                    | ❌       | ✅  | ✅     |
-| LANGUAGE                                           | Language of the block in form of [HTML language code](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang). `en` at default. | ❌       | ✅  | ✅     |
-| TIMEZONE                                           | Timezone of `Date.prototype.toLocaleDateString(locals, options)`, `GMT` at default.                                                               | ❌       | ✅  | ✅     |
+| Name                                               | Description                                                                                                                                       | Required | env | configured through discussion |
+| -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | --- | ----------------------------- |
+| [GITHUB_TOKEN](https://github.com/settings/tokens) | Require a access token with permissions in the `public_repo` scope for public repositories, or the `repo` scope for private ones.                 | ✅       | ✅  | ❌                            |
+| REPOSITORY                                         | The target repository                                                                                                                             | ✅       | ✅  | ❌                            |
+| CONFIG_CATEGORY                                    | Category name of posts for configuration purposes on GitHub Discussion. `Config` at default.                                                      | ❌       | ✅  | ❌                            |
+| POST_CATEGORY                                      | Category name of actual posts on GitHub Discussion. `Post` at default.                                                                            | ❌       | ✅  | ❌                            |
+| PAGE_CATEGORY                                      | Category name of posts for dedicated pages on GitHub Discussion. `Page` at default.                                                               | ❌       | ✅  | ❌                            |
+| PAGE_SIZE                                          | Number Category name of posts for configuration purposes in GitHub Discussion.kof posts per page, 10 at default.                                  | ❌       | ✅  | ✅                            |
+| BLOG_NAME                                          | Name of the blog, Hakuba fetches it from GitHub profile if left blank.                                                                            | ❌       | ✅  | ✅                            |
+| BIO                                                | Biography of the block, Hakuba fetches it from GitHub profile if left blank.                                                                      | ❌       | ✅  | ✅                            |
+| EMAIL                                              | Email for contact in the about section                                                                                                            | ❌       | ✅  | ✅                            |
+| TWITTER                                            | Twitter handle without the leading `@` (e.g. SvelteJS)                                                                                            | ❌       | ✅  | ✅                            |
+| DOMAIN                                             | Domain of the blog. RSS feed will be disabled if left blank.                                                                                      | ❌       | ✅  | ✅                            |
+| DESCRIPTION                                        | Description of the blog in SEO metadata.                                                                                                          | ❌       | ✅  | ✅                            |
+| KEYWORDS                                           | Keywords for SEO metadata.                                                                                                                        | ❌       | ✅  | ✅                            |
+| COMMENT                                            | Whether to enable comments, `true` at default.                                                                                                    | ❌       | ✅  | ✅                            |
+| LANGUAGE                                           | Language of the block in form of [HTML language code](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang). `en` at default. | ❌       | ✅  | ✅                            |
+| TIMEZONE                                           | Timezone of `Date.prototype.toLocaleDateString(locals, options)`, `GMT` at default.                                                               | ❌       | ✅  | ✅                            |
 
 ### Setup GitHub Discussions
 
@@ -60,7 +62,7 @@ Create discussions categories for configurations, posts, and pages. Then Set the
 
 > Hakuba supports mdx and HTML `script` tags for pages and posts, so don't make them public-editable❗❗❗
 
-Only the post named `index` will be used as the main configuration. Here is an [example](https://github.com/YeungKC/Hakuba/discussions/3).
+Only the page named `index` will be used as the main configuration. Here is an [example](https://github.com/YeungKC/Hakuba/discussions/3).
 
 ### Setup Webhooks
 
@@ -101,13 +103,13 @@ Added page will be displayed in navigation.
 
 Here is an [example](https://github.com/YeungKC/Hakuba/discussions/58)
 
-| name     | desc                                                  |
-| -------- | ----------------------------------------------------- |
-| lang     | Language of the post in the form of html language tag |
-| comment  | Whether to enable comments                            |
-| priority | Priority for indexing                                 |
-| path     | Path to the page, use all lowercase title by default  |
-| excerpt  | Excerpt of the page for SEO metadata                  |
+| name     | desc                                                        |
+| -------- | ----------------------------------------------------------- |
+| lang     | Language of the post in the form of html language attribute |
+| comment  | Whether to enable comments                                  |
+| priority | Priority for indexing                                       |
+| path     | Path to the page, use all lowercase title by default        |
+| excerpt  | Excerpt of the page for SEO metadata                        |
 
 ### Post front matter
 
@@ -117,7 +119,7 @@ Here is an [example](https://github.com/YeungKC/Hakuba/discussions/58)
 | --------- | ----------------------------------------------------------------------------------------------- |
 | lang      | Language of the post in the form of html language tag                                           |
 | comment   | Whether to enable comments                                                                      |
-| path      | Path to the post                                                                                |
+| path      | Path to the post, use discussion number by default                                              |
 | excerpt   | Excerpt of the page for SEO metadata                                                            |
 | title     | Title of the post. Hakuba uses the title of the discussion post at default.                     |
 | published | Date published. Hakuba uses the date of the discussion post at default.                         |
