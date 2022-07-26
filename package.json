@@ -41,7 +41,7 @@
 		"postcss": "^8.4.14",
 		"prettier": "^2.6.2",
 		"prettier-plugin-svelte": "^2.7.0",
-		"prettier-plugin-tailwindcss": "^0.1.12",
+		"prettier-plugin-tailwindcss": "^0.1.13",
 		"rehype-add-classes": "^1.0.0",
 		"rehype-autolink-headings": "^6.1.1",
 		"rehype-external-links": "^2.0.0",
