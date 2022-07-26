@@ -27,7 +27,7 @@
 		"@types/prettier": "^2.6.3",
 		"@types/rollup-plugin-visualizer": "^4.2.1",
 		"@typescript-eslint/eslint-plugin": "^5.31.0",
-		"@typescript-eslint/parser": "^5.30.7",
+		"@typescript-eslint/parser": "^5.31.0",
 		"autoprefixer": "^10.4.7",
 		"clsx": "^1.2.1",
 		"dotenv": "^16.0.1",
