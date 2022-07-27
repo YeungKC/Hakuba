@@ -97,6 +97,17 @@ pnpm build
 
 Finally, upload the `build` directory to your web server.
 
+#### Update code
+
+If you are using a fork or clone, you need to run the following command:
+
+```bash
+git remote add upstream https://github.com/YeungKC/Hakuba.git
+git fetch upstream/master
+git merge upstream/master
+git push origin master
+```
+
 ## Additional Settings for Pages and Posts
 
 Pages and posts support Markdown front matter for metadata and configuration overrides.
@@ -143,6 +154,22 @@ see also: <https://mdsvex.com/docs#limitations>
 ## Dependabot Auto Merge
 
 This project uses [action-dependabot-auto-merge](https://github.com/ahmadnassri/action-dependabot-auto-merge#token-scope) for updating dependencies automatically. If there is a CI failure, try to configure Dependabot secrets.
+
+## Migrate
+
+clone 这个仓库，配置 `GITHUB_TOKEN` 和 `REPOSITORY` 环境变量，使用包管理器安装依赖之后执行:
+
+Clone this repository, configure `GITHUB_TOKEN` and `REPOSITORY` environment variables, install dependencies with package manager and run:
+
+```bash
+# Run any one of them
+
+npm run generateData
+yarn generateData
+pnpm generateData
+```
+
+The post path is `src/routes/post/_source/[discussion number].md` and the page path is `src/routes/_page/[title].md`.
 
 ## Roadmap
 
