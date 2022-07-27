@@ -22,6 +22,8 @@ Then renders the actual blog pages from them.
 
 Recommended hosting services:
 
+> The output directory named `build`.
+
 - [Vercel](https://vercel.com/)
 - [Netlify](https://app.netlify.com/)
 - [Cloudflare Pages](https://pages.cloudflare.com/)
@@ -30,6 +32,10 @@ Deploy with Vercel:
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FYeungKC%2FHakuba&env=GITHUB_TOKEN,REPOSITORY&envDescription=Configure%20token%20and%20repository%20name%2C%20see%20https%3A%2F%2Fgithub.com%2FYeungKC%2FHakuba&project-name=blog&repo-name=blog&demo-title=Hakuba&demo-description=A%20fast%20blog%20starter%20driven%20by%20Github%20discussions%20for%20all%20data.&demo-url=https%3A%2F%2Fhakuba.yeungkc.com%2F&demo-image=https%3A%2F%2Fgithub.com%2FYeungKC%2FHakuba%2Fraw%2Fmaster%2Fscreenshots.png)
 
 ... or continue scrolling for guide about [manual deployment](#manual-deployment)
+
+> Hakuba just a blog starter，data and code are completely separated，so you can create a empty repository to write posts and pages discussion， and write a script to clone this repository and build.
+>
+> The advantage of this is that you can easily deploy your blog and don't need to worry about code updates.
 
 ### Configuration
 
