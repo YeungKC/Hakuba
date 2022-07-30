@@ -157,8 +157,6 @@ This project uses [action-dependabot-auto-merge](https://github.com/ahmadnassri/
 
 ## Migrate
 
-clone 这个仓库，配置 `GITHUB_TOKEN` 和 `REPOSITORY` 环境变量，使用包管理器安装依赖之后执行:
-
 Clone this repository, configure `GITHUB_TOKEN` and `REPOSITORY` environment variables, install dependencies with package manager and run:
 
 ```bash
