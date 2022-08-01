@@ -36,7 +36,7 @@
 		"eslint-plugin-svelte3": "^4.0.0",
 		"feed": "^4.2.2",
 		"mdsvex": "^0.10.6",
-		"node-fetch": "^3.2.9",
+		"node-fetch": "^3.2.10",
 		"path-to-regexp": "^6.2.1",
 		"postcss": "^8.4.14",
 		"prettier": "^2.6.2",
