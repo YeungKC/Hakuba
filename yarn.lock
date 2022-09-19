@@ -997,10 +997,10 @@ fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
   integrity sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==
 
-fast-glob@^3.2.11, fast-glob@^3.2.7, fast-glob@^3.2.9:
-  version "3.2.11"
-  resolved "https://registry.yarnpkg.com/fast-glob/-/fast-glob-3.2.11.tgz#a1172ad95ceb8a16e20caa5c5e56480e5129c1d9"
-  integrity sha512-xrO3+1bxSo3ZVHAnqzyuewYT6aMFHRAd4Kcs92MAonjwQZLsK9d0SF1IyQ3k5PoirxTW0Oe/RqFgMQ6TcNE5Ew==
+fast-glob@^3.2.11, fast-glob@^3.2.12, fast-glob@^3.2.7, fast-glob@^3.2.9:
+  version "3.2.12"
+  resolved "https://registry.yarnpkg.com/fast-glob/-/fast-glob-3.2.12.tgz#7f39ec99c2e6ab030337142da9e0c18f37afae80"
+  integrity sha512-DVj4CQIYYow0BlaelwK1pHl5n5cRSJfM60UA0zK891sVInoPri2Ekj7+e1CT3/3qxXenpI+nBBmQAcJPJgaj4w==
   dependencies:
     "@nodelib/fs.stat" "^2.0.2"
     "@nodelib/fs.walk" "^1.2.3"
@@ -2067,12 +2067,12 @@ svelte-preprocess@^4.0.0, svelte-preprocess@^4.10.7:
     sorcery "^0.10.0"
     strip-indent "^3.0.0"
 
-svelte-sitemap@^2.5.1:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/svelte-sitemap/-/svelte-sitemap-2.5.1.tgz#26e6dbeb91bd0856c2a2a5ca004a571fbb528220"
-  integrity sha512-BiiITGlpvtOqUMmqYjSxyg4YACXyEFkJ2A4DrKSskooJre/rbrFXzbuqpryix6+7leg2TIcycse1gQtFkDNdbQ==
+svelte-sitemap@^2.5.2:
+  version "2.5.2"
+  resolved "https://registry.yarnpkg.com/svelte-sitemap/-/svelte-sitemap-2.5.2.tgz#efda76f344156c0ec6ffc359e74010808d428991"
+  integrity sha512-fAXHDMkhyx9W3Ykn6i9rnygTcFXB0cVEylfqfOr3083cTfckZXLFKOQ4+VSjzAM68N2C3dKSISufP7R9ea+UVg==
   dependencies:
-    fast-glob "^3.2.11"
+    fast-glob "^3.2.12"
     minimist "^1.2.6"
     xmlbuilder2 "^3.0.2"
 
