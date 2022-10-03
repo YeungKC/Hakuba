@@ -158,9 +158,9 @@
     picomatch "^2.2.2"
 
 "@sveltejs/adapter-static@next":
-  version "1.0.0-next.43"
-  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-static/-/adapter-static-1.0.0-next.43.tgz#1505075d9d6ee2e0bac3dde250a7264235e73015"
-  integrity sha512-PAgSp1GA8HkYE4p30/sBvJme2nefhcTBJafqQdMNoUksWZF2WzuL8OEO8wa9ndE6cghcGk3j6Ve0Oskg/wtTOw==
+  version "1.0.0-next.44"
+  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-static/-/adapter-static-1.0.0-next.44.tgz#44be6fa94c090a8c70079d60482ec03ab25c5368"
+  integrity sha512-qBtkmIMYGiDv5r2F3AfSG0ABHZim2NC+1PL2YVCa+QYz8IVCm1E/wGQ0RW4KVrANZ3MZk8y52PPajx+8/fwmNw==
 
 "@sveltejs/kit@next":
   version "1.0.0-next.372"
