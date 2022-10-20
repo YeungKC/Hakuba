@@ -153,9 +153,9 @@
     picomatch "^2.2.2"
 
 "@sveltejs/adapter-static@next":
-  version "1.0.0-next.44"
-  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-static/-/adapter-static-1.0.0-next.44.tgz#44be6fa94c090a8c70079d60482ec03ab25c5368"
-  integrity sha512-qBtkmIMYGiDv5r2F3AfSG0ABHZim2NC+1PL2YVCa+QYz8IVCm1E/wGQ0RW4KVrANZ3MZk8y52PPajx+8/fwmNw==
+  version "1.0.0-next.45"
+  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-static/-/adapter-static-1.0.0-next.45.tgz#7bfbba6d364c32688a7fa660776030b6174b0c9c"
+  integrity sha512-7hJp3QYbn5+hDJKJDMe3ufAvPlgSP6Ishm1X84cbydKM1ZuI/rtmQw3gDEUuXAgcU+TDJTJLwrSlcErr1/HjIw==
 
 "@sveltejs/kit@next":
   version "1.0.0-next.372"
