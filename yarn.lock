@@ -29,12 +29,12 @@
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-6.2.0.tgz#ba3510825b332816fe7190f28827f8cb33a298b5"
   integrity sha512-CNR7qRIfCwWHNN7FnKUniva94edPdyQzil/zCwk3v6k4R6rR2Fr8i4s3PM7n/lyfPA6Zfko9z5WDzFxG9SW1uQ==
 
-"@giscus/svelte@^2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@giscus/svelte/-/svelte-2.2.0.tgz#718167bdf73a051ca161057d7ad6bd59a87e6836"
-  integrity sha512-dxomf0m8bkRf1wFZwCm2brG8m//5OiddCUXDvHKynWkoRtbWjGsTxOY3/gxDGCHDSidxVwvmpDGNdWMj3E/FDA==
+"@giscus/svelte@^2.2.2":
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/@giscus/svelte/-/svelte-2.2.2.tgz#bb8f5710465a67baa3c696591c0ed7054689465d"
+  integrity sha512-erCOLA3XeG1oONEZXUJoMWKtaZV2gJrxYuI8qb796BMGMttpYVtOW8CYV86/Ul9a7ml2CL+4NbBDnHOainI+Gw==
   dependencies:
-    giscus "^1.2.0"
+    giscus "^1.2.2"
 
 "@humanwhocodes/config-array@^0.11.6":
   version "0.11.6"
@@ -85,6 +85,11 @@
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/@lit/reactive-element/-/reactive-element-1.3.3.tgz#851de2bd28d6c3378a816a28d2505075931559c2"
   integrity sha512-ukelZ49tzUqgOAEbVujl/U62JNK3wdn5kKtXVqrjKND4QvHACZOMOYaZI6/5Jd8vsg+Fq9HDwiib70FBLydOiQ==
+
+"@lit/reactive-element@^1.4.0":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@lit/reactive-element/-/reactive-element-1.4.2.tgz#65d659e89d1a7e2f4f2b547182aef0a224f4adb7"
+  integrity sha512-VMOxsWh/QDwrxPsgkSQnuZ+8mfNy1OTjzzUdLBvvZtpahwPTHTeVZ51RZRqO4xfKVrR+btIPA8D01IL3xeG66w==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -1109,12 +1114,12 @@ get-caller-file@^2.0.5:
   resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-2.0.5.tgz#4f94412a82db32f36e3b0b9741f8a97feb031f7e"
   integrity sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==
 
-giscus@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/giscus/-/giscus-1.2.0.tgz#c94477a1c571abc4ac6dca656da7be46f880a708"
-  integrity sha512-IpfWvU0/hYbMGQKuoPlED8wWmluRYIOjtrBCnL7logsWjMpPRxiAC2pUIC0+SC0pDMOqXrk1onTYMHgwgRpRzg==
+giscus@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/giscus/-/giscus-1.2.2.tgz#b186ede8bba56869f2a1b902031c54d528662677"
+  integrity sha512-H71M3V5K/mmWr5/OwCMCH+s7Z2wVT6uQ1AXe5B0f0jjAGvJ9unAklfp4cNJU5zamjDdMZFVFi/9xhhbHIG3ZTQ==
   dependencies:
-    lit "^2.2.8"
+    lit "^2.4.1"
 
 github-slugger@^2.0.0:
   version "2.0.0"
@@ -1414,14 +1419,21 @@ lit-html@^2.2.0:
   dependencies:
     "@types/trusted-types" "^2.0.2"
 
-lit@^2.2.8:
-  version "2.2.8"
-  resolved "https://registry.yarnpkg.com/lit/-/lit-2.2.8.tgz#26bdf560042aa3ec9b788f5d48119f7138b2dcc1"
-  integrity sha512-QjeNbi/H9LVIHR+u0OqsL+hs62a16m02JlJHYN48HcBuXyiPYR8JvzsTp5dYYS81l+b9Emp3UaGo82EheV0pog==
+lit-html@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-2.4.0.tgz#b510430f39a56ec959167ed1187241a4e3ab1574"
+  integrity sha512-G6qXu4JNUpY6aaF2VMfaszhO9hlWw0hOTRFDmuMheg/nDYGB+2RztUSOyrzALAbr8Nh0Y7qjhYkReh3rPnplVg==
   dependencies:
-    "@lit/reactive-element" "^1.3.0"
+    "@types/trusted-types" "^2.0.2"
+
+lit@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/lit/-/lit-2.4.1.tgz#21251ac14eb1ec8ca7cd15c9ac3564359809f7b5"
+  integrity sha512-qohSgLiyN1cFnJG26dIiY03S4F49857A0AHQfnS0zYtnUVnD2MFvx+UT52rtXsIuNFQrnUupX+zyGSATlk1f/A==
+  dependencies:
+    "@lit/reactive-element" "^1.4.0"
     lit-element "^3.2.0"
-    lit-html "^2.2.0"
+    lit-html "^2.4.0"
 
 locate-path@^6.0.0:
   version "6.0.0"
