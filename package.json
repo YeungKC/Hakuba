@@ -50,7 +50,7 @@
 		"svelte": "^3.52.0",
 		"svelte-check": "^2.9.2",
 		"svelte-preprocess": "^4.10.7",
-		"svelte-sitemap": "^2.5.2",
+		"svelte-sitemap": "^2.5.3",
 		"tailwindcss": "^3.2.2",
 		"ts-node": "^10.9.1",
 		"tslib": "^2.4.1",
