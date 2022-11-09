@@ -21,7 +21,7 @@
 		"@playwright/test": "^1.27.1",
 		"@sveltejs/adapter-static": "next",
 		"@sveltejs/kit": "next",
-		"@tailwindcss/typography": "^0.5.7",
+		"@tailwindcss/typography": "^0.5.8",
 		"@types/eslint": "^8.4.9",
 		"@types/node": "^18.11.9",
 		"@types/prettier": "^2.7.1",
