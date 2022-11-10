@@ -2094,10 +2094,10 @@ svelte-sitemap@^2.5.3:
     minimist "^1.2.7"
     xmlbuilder2 "^3.0.2"
 
-svelte@^3.52.0:
-  version "3.52.0"
-  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.52.0.tgz#08259eff20904c63882b66a5d409a55e8c6743b8"
-  integrity sha512-FxcnEUOAVfr10vDU5dVgJN19IvqeHQCS1zfe8vayTfis9A2t5Fhx+JDe5uv/C3j//bB1umpLJ6quhgs9xyUbCQ==
+svelte@^3.53.0:
+  version "3.53.0"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.53.0.tgz#e07cdd458f89ec47508ffac20c97a778516026a3"
+  integrity sha512-QwR6zwpcdpz5OqybIHlghM+qP2qKbzsKQuU9npgAmnI6zoTDIcjbcseUZA0AJGbotorltpQ0f413euKK4w+Piw==
 
 tailwindcss@^3.2.2:
   version "3.2.2"
