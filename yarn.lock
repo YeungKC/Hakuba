@@ -2104,10 +2104,10 @@ svelte-preprocess@^5.0.0:
     sorcery "^0.10.0"
     strip-indent "^3.0.0"
 
-svelte-sitemap@^2.5.3:
-  version "2.5.3"
-  resolved "https://registry.yarnpkg.com/svelte-sitemap/-/svelte-sitemap-2.5.3.tgz#f3b557cecd47cae57ed9d96afd4dfda47ade5453"
-  integrity sha512-EX5ftZA7aTjOznxooQP27/qOUJsiw58btMhbeCNaR+qjm0yhFuN2ZmVmb3UyZ8H0ytxYvaT0hY820bRbdgpHuA==
+svelte-sitemap@^2.5.4:
+  version "2.5.4"
+  resolved "https://registry.yarnpkg.com/svelte-sitemap/-/svelte-sitemap-2.5.4.tgz#a359e55b38ee853dcbae9e5821c02bc85ad6185a"
+  integrity sha512-wIkzjIM2j7iu8aVFokVJP14qKJkBLVrNfkQZY5SukBx036rJaSYNclInWySdJO9s9vPbzZva945C3XmdOFi6fw==
   dependencies:
     fast-glob "^3.2.12"
     minimist "^1.2.7"
