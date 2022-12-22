@@ -18,7 +18,7 @@
 	"devDependencies": {
 		"@fortawesome/fontawesome-free": "^6.2.1",
 		"@giscus/svelte": "^2.2.4",
-		"@playwright/test": "^1.29.0",
+		"@playwright/test": "^1.29.1",
 		"@sveltejs/adapter-static": "next",
 		"@sveltejs/kit": "next",
 		"@tailwindcss/typography": "^0.5.8",
