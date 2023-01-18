@@ -38,7 +38,7 @@
 		"mdsvex": "^0.10.6",
 		"node-fetch": "^3.3.0",
 		"path-to-regexp": "^6.2.1",
-		"postcss": "^8.4.20",
+		"postcss": "^8.4.21",
 		"prettier": "^2.8.3",
 		"prettier-plugin-svelte": "^2.9.0",
 		"prettier-plugin-tailwindcss": "^0.1.13",
