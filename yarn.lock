@@ -1524,10 +1524,10 @@ minimatch@^3.0.5, minimatch@^3.1.1, minimatch@^3.1.2:
   dependencies:
     brace-expansion "^1.1.7"
 
-minimist@^1.2.0, minimist@^1.2.6, minimist@^1.2.7:
-  version "1.2.7"
-  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.7.tgz#daa1c4d91f507390437c6a8bc01078e7000c4d18"
-  integrity sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==
+minimist@^1.2.0, minimist@^1.2.6, minimist@^1.2.8:
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.8.tgz#c1a464e7693302e082a075cee0c057741ac4772c"
+  integrity sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==
 
 mkdirp@^0.5.1:
   version "0.5.6"
@@ -2100,13 +2100,13 @@ svelte-preprocess@^5.0.0, svelte-preprocess@^5.0.1:
     sorcery "^0.11.0"
     strip-indent "^3.0.0"
 
-svelte-sitemap@^2.5.4:
-  version "2.5.4"
-  resolved "https://registry.yarnpkg.com/svelte-sitemap/-/svelte-sitemap-2.5.4.tgz#a359e55b38ee853dcbae9e5821c02bc85ad6185a"
-  integrity sha512-wIkzjIM2j7iu8aVFokVJP14qKJkBLVrNfkQZY5SukBx036rJaSYNclInWySdJO9s9vPbzZva945C3XmdOFi6fw==
+svelte-sitemap@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/svelte-sitemap/-/svelte-sitemap-2.6.0.tgz#90723cf8bb300543d450a9b63367baa2746efef6"
+  integrity sha512-WcwsuIeo8iJFG9a5cgvXwXEGoyjk6Zowb6JmL5BbwfnFXMzakGa1+mQjthw5Ni3UV/gGbE0PgJvc7Ygir3LmFg==
   dependencies:
     fast-glob "^3.2.12"
-    minimist "^1.2.7"
+    minimist "^1.2.8"
     xmlbuilder2 "^3.0.2"
 
 svelte@^3.55.1:
