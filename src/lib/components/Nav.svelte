@@ -10,7 +10,7 @@
 <nav class="z-10">
 	<ul
 		class={classname(
-			'flex flex-row divide-x leading-4 divide-dotted child:px-1 first:child:pl-0 last:child:pr-0 [&_a]:py-4 [&_a]:px-2 -ml-2',
+			'-ml-2 flex flex-row divide-x divide-dotted leading-4 child:px-1 first:child:pl-0 last:child:pr-0 [&_a]:py-4 [&_a]:px-2',
 			clazz
 		)}
 	>
