@@ -22,7 +22,7 @@
 		"@sveltejs/adapter-static": "next",
 		"@sveltejs/kit": "next",
 		"@tailwindcss/typography": "^0.5.9",
-		"@types/eslint": "^8.21.2",
+		"@types/eslint": "^8.21.3",
 		"@types/node": "^18.15.3",
 		"@types/prettier": "^2.7.2",
 		"@types/rollup-plugin-visualizer": "^4.2.1",
