@@ -24,7 +24,7 @@
 		"@tailwindcss/typography": "^0.5.9",
 		"@types/eslint": "^8.21.3",
 		"@types/node": "^20.3.1",
-		"@types/prettier": "^2.7.2",
+		"@types/prettier": "^2.7.3",
 		"@types/rollup-plugin-visualizer": "^4.2.1",
 		"@typescript-eslint/eslint-plugin": "^5.59.11",
 		"@typescript-eslint/parser": "^5.59.11",
