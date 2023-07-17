@@ -29,7 +29,7 @@
 		"@typescript-eslint/eslint-plugin": "^5.61.0",
 		"@typescript-eslint/parser": "^5.60.1",
 		"autoprefixer": "^10.4.14",
-		"clsx": "^1.2.1",
+		"clsx": "^2.0.0",
 		"dotenv": "^16.3.1",
 		"eslint": "^8.36.0",
 		"eslint-config-prettier": "^8.8.0",
