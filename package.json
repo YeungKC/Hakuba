@@ -54,7 +54,7 @@
 		"tailwindcss": "^3.2.7",
 		"ts-node": "^10.9.1",
 		"tslib": "^2.6.1",
-		"typescript": "^5.1.6",
+		"typescript": "^5.3.2",
 		"vite": "^2.9.16",
 		"yaml": "^2.3.1"
 	},
