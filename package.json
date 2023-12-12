@@ -46,7 +46,7 @@
 		"rehype-autolink-headings": "^6.1.1",
 		"rehype-external-links": "^2.1.0",
 		"rehype-slug": "^6.0.0",
-		"rollup-plugin-visualizer": "^5.9.2",
+		"rollup-plugin-visualizer": "^5.11.0",
 		"svelte": "^3.59.2",
 		"svelte-check": "^3.4.6",
 		"svelte-preprocess": "^5.1.1",
