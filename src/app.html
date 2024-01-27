@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="%lang%">
-	<head>
-		<meta charset="utf-8" />
-		<!-- <link rel="icon" href="%sveltekit.assets%/favicon.png" /> -->
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		%sveltekit.head%
-	</head>
 
-	<body class="bg-slate-50">
-		<div
-			class="container flex min-h-screen max-w-screen-md flex-col px-8 pt-16 text-sm text-slate-900"
-		>
-			%sveltekit.body%
-		</div>
-	</body>
+<head>
+	<meta charset="utf-8" />
+	<!-- <link rel="icon" href="%sveltekit.assets%/favicon.png" /> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	%sveltekit.head%
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+		integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+</head>
+
+<body class="bg-slate-50">
+	<div class="container flex min-h-screen max-w-screen-md flex-col px-8 pt-16 text-sm text-slate-900">
+		%sveltekit.body%
+	</div>
+</body>
+
 </html>

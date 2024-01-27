@@ -5,6 +5,8 @@ import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeExternalLinks from 'rehype-external-links';
 import addClasses from 'rehype-add-classes';
+import remarkMath from 'remark-math';
+import rehypeKatexSvelte from 'rehype-katex-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -23,7 +25,9 @@ const config = {
 			highlight: {
 				alias: { vue: 'html' }
 			},
+			remarkPlugins: [remarkMath],
 			rehypePlugins: [
+				rehypeKatexSvelte,
 				rehypeSlug,
 				rehypeAutolinkHeadings,
 				[rehypeExternalLinks, { target: '_blank' }],
