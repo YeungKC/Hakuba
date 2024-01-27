@@ -3,8 +3,8 @@ import { DiscussionsType } from './types';
 dotenv.config();
 
 const configCategoryName = process.env.CONFIG_CATEGORY || 'Config';
-const postCategoryName = process.env.POST_CATEGORY || 'Post';
 const pageCategoryName = process.env.PAGE_CATEGORY || 'Page';
+const postCategoryRegex = new RegExp(process.env.POST_CATEGORY || 'Post');
 
 export const findConfig = (list: DiscussionsType[]) => {
 	const configText = list.find(
@@ -23,7 +23,7 @@ export const filterPage = (list: DiscussionsType[]) => {
 };
 
 export const filterPost = (list: DiscussionsType[]) => {
-	const posts = list.filter((e) => e.category.name === postCategoryName);
+	const posts = list.filter((e) => postCategoryRegex.test(e.category.name));
 	console.log(`filtered posts: ${posts.length}`);
 	return posts;
 };
