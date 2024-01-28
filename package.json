@@ -4,8 +4,8 @@
 	"scripts": {
 		"dev": "vite dev",
 		"generateData": "ts-node .scripts/pre/index.ts",
-		"build": "ts-node .scripts/pre/index.ts && vite build && ts-node .scripts/post/index.ts",
-		"report": "ts-node .scripts/pre/index.ts && vite build && ts-node .scripts/post/index.ts",
+		"build": "ts-node .scripts/pre/index.ts && vite build && ts-node .scripts/post/index.ts && cp -r static/* build",
+		"report": "ts-node .scripts/pre/index.ts && vite build && ts-node .scripts/post/index.ts && cp -r static/* build",
 		"package": "svelte-kit package",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync",
