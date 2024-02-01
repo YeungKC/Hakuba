@@ -3,6 +3,7 @@
 	import { fetchPages } from '$lib/helper/fetchPage';
 	import HomeHeader from '$lib/components/HomeHeader.svelte';
 	import type Page from '$lib/types/page';
+	import Analyics from '$lib/components/Analyics.svelte';
 
 	export const load: Load = async ({ params }) => {
 		const pages = await fetchPages();
@@ -17,6 +18,8 @@
 <script lang="ts">
 	export let pages: Page[];
 </script>
+
+<Analyics />
 
 <HomeHeader {pages} />
 

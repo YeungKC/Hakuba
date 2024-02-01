@@ -17,6 +17,8 @@
 </script>
 
 <script lang="ts">
+	import Analyics from '$lib/components/Analyics.svelte';
+
 	export let pages: Page[];
 </script>
 
@@ -35,6 +37,8 @@
 		<meta name="twitter:creator" content={`@${TWITTER}`} />
 	{/if}
 </svelte:head>
+
+<Analyics />
 
 <main class="flex flex-grow flex-col">
 	<slot />
