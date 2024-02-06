@@ -6,7 +6,11 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeExternalLinks from 'rehype-external-links';
 import addClasses from 'rehype-add-classes';
 import remarkMath from 'remark-math';
+import remarkGithub from 'remark-github';
 import rehypeKatexSvelte from 'rehype-katex-svelte';
+
+import dotenv from 'dotenv';
+dotenv.config();
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -25,7 +29,10 @@ const config = {
 			highlight: {
 				alias: { vue: 'html' }
 			},
-			remarkPlugins: [remarkMath],
+			remarkPlugins: [
+				remarkMath,
+				[remarkGithub, { repository: `${process.env.GITHUB_USER}/${process.env.REPOSITORY}` }]
+			],
 			rehypePlugins: [
 				rehypeKatexSvelte,
 				rehypeSlug,
