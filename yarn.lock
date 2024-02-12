@@ -743,10 +743,10 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
-dotenv@^16.4.0:
-  version "16.4.0"
-  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.4.0.tgz#ac21c3fcaad2e7832a1cd0c0e4e8e52225ecda0e"
-  integrity sha512-WvImr5kpN5NGNn7KaDjJnLTh5rDVLZiDf/YLA8T1ZEZEBZNEDOE+mnkS0PVjPax8ZxBP5zC5SLMB3/9VV5de9g==
+dotenv@^16.4.2:
+  version "16.4.2"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.4.2.tgz#7ca798f89ae2011846bbdbf6470785307754120d"
+  integrity sha512-rZSSFxke7d9nYQ5NeMIwp5PP+f8wXgKNljpOb7KtH6SKW1cEqcXAz9VSJYVLKe7Jhup/gUYOkaeSVyK8GJ+nBg==
 
 electron-to-chromium@^1.4.601:
   version "1.4.604"
