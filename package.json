@@ -37,7 +37,7 @@
 		"feed": "^4.2.2",
 		"mdsvex": "^0.11.0",
 		"node-fetch": "^3.3.2",
-		"path-to-regexp": "^6.2.1",
+		"path-to-regexp": "^8.0.0",
 		"postcss": "^8.4.35",
 		"prettier": "^2.8.8",
 		"prettier-plugin-svelte": "^2.9.0",
