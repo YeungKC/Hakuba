@@ -40,7 +40,7 @@
 		"path-to-regexp": "^6.2.1",
 		"postcss": "^8.4.35",
 		"prettier": "^2.8.8",
-		"prettier-plugin-svelte": "^2.9.0",
+		"prettier-plugin-svelte": "^3.2.7",
 		"prettier-plugin-tailwindcss": "^0.4.1",
 		"rehype-add-classes": "^1.0.0",
 		"rehype-autolink-headings": "^7.1.0",
