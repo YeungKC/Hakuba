@@ -29,7 +29,7 @@ Recommended hosting services:
 - [Cloudflare Pages](https://pages.cloudflare.com/)
 
 Deploy with Vercel:  
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FYeungKC%2FHakuba&env=GITHUB_TOKEN,REPOSITORY&envDescription=Configure%20token%20and%20repository%20name%2C%20see%20https%3A%2F%2Fgithub.com%2FYeungKC%2FHakuba&project-name=blog&repo-name=blog&demo-title=Hakuba&demo-description=A%20fast%20blog%20starter%20driven%20by%20Github%20discussions%20for%20all%20data.&demo-url=https%3A%2F%2Fhakuba.yeungkc.com%2F&demo-image=https%3A%2F%2Fgithub.com%2FYeungKC%2FHakuba%2Fraw%2Fmaster%2Fscreenshots.png)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsuperyngo%2FHakuba_forked&env=GITHUB_TOKEN,REPOSITORY&envDescription=Configure%20token%20and%20repository%20name%2C%20see%20https%3A%2F%2Fgithub.com%2Fsuperyngo%2FHakuba_forked&project-name=blog&repo-name=blog&demo-title=Hakuba&demo-description=A%20fast%20blog%20starter%20driven%20by%20Github%20discussions%20for%20all%20data.&demo-url=https%3A%2F%2Fhakuba.yeungkc.com%2F&demo-image=https%3A%2F%2Fgithub.com%2FYeungKC%2FHakuba%2Fraw%2Fmaster%2Fscreenshots.png)
 
 ... or continue scrolling for guide about [manual deployment](#manual-deployment)
 

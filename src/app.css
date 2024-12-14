@@ -9,7 +9,7 @@
 
 	/* css page scrollbar toggle center no jumping */
 	html {
-		@apple overflow-y-scroll;
+		@apply overflow-y-scroll;
 	}
 
 	:root {
