@@ -38,8 +38,8 @@
 	$: hasPrev = currentPage > 1;
 
 	const to = (index: number) => {
-		if (index === 1) return '/';
-		return `${basePath}${index}`;
+		if (index === 1) return basePath;
+		return `${basePath}page/${index}`;
 	};
 </script>
 

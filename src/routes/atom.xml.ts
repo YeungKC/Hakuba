@@ -22,7 +22,7 @@ export const get = async () => {
 		copyright: `Copyright © ${new Date().getFullYear()} ${BLOG_NAME}. All Rights Reserved`,
 		generator: 'Hakuba',
 		updated: new Date(last?.metadata.updated || last?.metadata.published || new Date()),
-		feed: `${DOMAIN}atom.xml`,
+		feed: `${DOMAIN}/atom.xml`,
 		author: {
 			name: USER_NAME,
 			email: EMAIL,
@@ -32,7 +32,7 @@ export const get = async () => {
 
 	posts.list.forEach(({ metadata }) => {
 		feed.addItem({
-			link: `${DOMAIN}posts/${metadata.number}`,
+			link: `${DOMAIN}/post/${metadata.path || metadata.number}`,
 			title: metadata.title,
 			date: new Date(metadata.updated || metadata.published),
 			published: new Date(metadata.published),

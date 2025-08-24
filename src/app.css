@@ -3,25 +3,15 @@
 @tailwind utilities;
 
 @layer base {
-	a > span.icon.icon-link {
-		@apply relative opacity-0 transition before:absolute before:-left-[1.5ch] before:pr-[1.5ch] before:content-['#'] group-hover:opacity-100 [@media(any-hover:none)]:opacity-100;
+	a>span.icon.icon-link {
+		@apply relative opacity-0 transition-opacity before:absolute before:-left-5 before:content-['#'] group-hover:opacity-100 [@media(any-hover:none)]:opacity-100;
 	}
 
-	/* css page scrollbar toggle center no jumping */
 	html {
-		@apple overflow-y-scroll;
-	}
-
-	:root {
-		@apply overflow-y-auto overflow-x-hidden;
-	}
-
-	:root body {
-		@apply absolute;
+		@apply overflow-y-scroll antialiased text-base;
 	}
 
 	body {
-		@apply w-screen overflow-hidden;
+		@apply w-full min-h-screen bg-white text-gray-900 transition-colors duration-200;
 	}
-	/* css page scrollbar toggle center no jumping */
 }
